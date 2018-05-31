@@ -4,7 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>HONDA用心只做更好</title>
+		<title>HONDA  用心只做更好</title>
+		<link rel="shortcut icon" href="../img/favicon-1.ico" type="image/x-icon">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 		crossorigin="anonymous">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300' rel='stylesheet' type='text/css'>
@@ -16,57 +17,301 @@
 		<script src="js/modernizr.min.js"></script>
 	</head>
 	<style>
-		.navbar-brand img {
-        height: 70px;
-    }
 
-    ul.navbar-nav li {
-        min-width: 110px;
+ @media(max-width: 767px) {
+            .menuIcon {
+                cursor: pointer;
+                display: block;
+                position: absolute;
+                right: 15px;
+                top: 8px;
+                height: 30px;
+                width: 35px;
+                z-index: 12;
 
-    }
+            }
 
-    .dropdown-menu {
-        background-color: #f8f9fa;
-        border-radius: 0;
-    }
+            /* Icon Bars */
+            .icon-bars {
+                background: rgb(13, 26, 38);
+                position: absolute;
+                left: 1px;
+                top: 80%;
+                height: 2px;
+                width: 30px;
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+            }
 
-    .dropdown-menu .show {
-        transition: all 0.3s ease-out;
-        transition-duration: 0.3s;
-    }
+            .icon-bars::before {
+                background: rgb(13, 26, 38);
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -8px;
+                height: 2px;
+                width: 30px;
+                /*     -webkit-transition: top 0.2s ease 0.3s;
+    transition: top 0.2s ease 0.3s; */
+                -webkit-transition: 0.3s width 0.4s;
+                transition: 0.3s width 0.4s;
+            }
 
+            .icon-bars::after {
+                margin-top: 0px;
+                background: rgb(13, 26, 38);
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                height: 2px;
+                width: 30px;
+                /*     -webkit-transition: top 0.2s ease 0.3s;
+    transition: top 0.2s ease 0.3s; */
+                -webkit-transition: 0.3s width 0.4s;
+                transition: 0.3s width 0.4s;
+            }
 
-    .navbar {
-        box-shadow: 0px -3px 10px 3px #000000,
-        0px -3px 13px 2px #000000;
-    }
+            /* Bars Shadows */
+            .icon-bars.overlay {
+                background: rgb(97, 114, 129);
+                background: #D64358;
+                width: 20px;
+                animation: middleBar 3s infinite 0.5s;
+                -webkit-animation: middleBar 3s infinite 0.5s;
+            }
+            @keyframes middleBar {
+                0% {
+                    width: 0px
+                }
+                50% {
+                    width: 20px
+                }
+                100% {
+                    width: 0px
+                }
+            }
+            @-webkit-keyframes middleBar {
+                0% {
+                    width: 0px
+                }
+                50% {
+                    width: 20px
+                }
+                100% {
+                    width: 0px
+                }
+            }
 
-    @media screen and (max-width:768px) {
+            .icon-bars.overlay::before {
+                background: rgb(97, 114, 129);
+                background: #D64358;
+                width: 10px;
+                animation: topBar 3s infinite 0.2s;
+                -webkit-animation: topBar 3s infinite 0s;
+            }
+            @keyframes topBar {
+                0% {
+                    width: 0px
+                }
+                50% {
+                    width: 10px
+                }
+                100% {
+                    width: 0px
+                }
+            }
+            @-webkit-keyframes topBar {
+                0% {
+                    width: 0px
+                }
+                50% {
+                    width: 10px
+                }
+                100% {
+                    width: 0px
+                }
+            }
 
-        .nav-w {
-            width: 100%;
+            .icon-bars.overlay::after {
+                background: rgb(97, 114, 129);
+                background: #D64358;
+                width: 15px;
+                animation: bottomBar 3s infinite 1s;
+                -webkit-animation: bottomBar 3s infinite 1s;
+            }
+            @keyframes bottomBar {
+                0% {
+                    width: 0px
+                }
+                50% {
+                    width: 15px
+                }
+                100% {
+                    width: 0px
+                }
+            }
+            @-webkit-keyframes bottomBar {
+                0% {
+                    width: 0px
+                }
+                50% {
+                    width: 15px
+                }
+                100% {
+                    width: 0px
+                }
+            }
+
+            .menuIcon.toggle .icon-bars {
+                top: 20px;
+                transform: translate3d(0, 5px, 0) rotate(135deg);
+                transition-delay: 0.1s;
+                transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            .menuIcon.toggle .icon-bars::before {
+                top: 20;
+                transition-delay: 0.1s;
+                opacity: 0;
+            }
+
+            .menuIcon.toggle .icon-bars::after {
+                top: 10px;
+                transform: translate3d(0, -10px, 0) rotate(-270deg);
+                transition-delay: 0.1s;
+                transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            .menuIcon.toggle .icon-bars.overlay {
+                width: 20px;
+                opacity: 0;
+                -webkit-transition: all 0s ease 0s;
+                transition: all 0s ease 0s;
+
+            }
+        }
+
+        .overlay-menu {
+            background: #3a3a3a;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 69px;
+            right: 0;
+            padding-right: 15px;
+            transform: translateX(-100%);
+            width: 100vw;
+
+            height: calc(100vh - 69px);
+            -webkit-transition: transform 0.2s ease-out;
+            transition: transform 0.2s ease-out;
+            z-index: 999;
+            font-size: 15px;
             text-align: center;
         }
-        .dropdown-item {
-            text-align: center;
+
+
+        .navbar-brand {
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
-        @media screen and (max-width: 568px) {
-            .dropdown-menu {
-                background-color: #373737;
-                border-radius: 0;
-                border: 0;
-            }
-            .dropdown-item {
-                color: #f8f9fa;
-                padding: 10px;
-            }
-            .dropdown-divider {
-                display: none;
+        .navbar .card {
+            border: none;
+            background: none;
+        }
+
+        button {
+            padding: 0;
+        }
+
+        .navbar .card-header {
+            font-size: 27px;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 10px;
+            padding-top: 20px;
+            margin-bottom: 0;
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .navbar .card-header h5 {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .navbar .card-body {
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            color: #f8f9fa;
+        }
+
+        .navbar .btn {
+            font-size: 27px;
+            border: none;
+            padding: 0;
+        }
+
+        .navbar .btn-link {
+            color: #fff;
+        }
+
+        #collapseOne a {
+            font-size: 15px;
+        }
+
+        .overlay-menu ul,
+        .overlay-menu li {
+            display: block;
+            position: relative;
+            color: #353333;
+
+        }
+
+        .overlay-menu li a {
+            display: block;
+            color: #FFf;
+            font-size: 1.8em;
+            letter-spacing: 4px;
+            /*   opacity: 0; */
+            padding: 10px 0;
+            text-align: right;
+            text-transform: uppercase;
+            -webkit-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+            /*   -webkit-transition: 0.2s opacity 0.2s ease-out;
+  transition: 0.2s opacity 0.2s ease-out; */
+        }
+
+        .overlay-menu li a:hover,
+        .overlay-menu li a:active {
+            color: gray(28, 121, 184);
+            -webkit-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+        }
+
+        @media screen and ( max-width: 768px) {
+            .navbar-brand img {
+                width: 50%;
+                height: 53px;
             }
         }
 
-	}
+
+
+
+
+
+
+
+
+
 
 .footerclass {
   font: 13px "Open Sans", sans-serif;
@@ -313,85 +558,118 @@ footer {
 }
 	</style>
 	<body>
-			<nav class="navbar navbar-expand-md navbar-light bg-light">
-					<div class="container">
-						<a class="navbar-brand" href="#">
-							<img class="logo" src="img/logo.png" alt="">
-						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-							aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-			
-						<div class="collapse navbar-collapse  " id="navbarSupportedContent">
-							<ul class="navbar-nav w-100 justify-content-around align-items-center">
-								<a class="navbar-brand d-none d-xl-block " href="#">
-									<img src="/img/logo.png" alt="">
-								</a>
-								<li class="nav-item dropdown nav-w">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="false">
-										關於HONDA
-									</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="#">企業願景</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">生產中心</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">The Power of Dreams</a>
-			
-									</div>
-								</li>
-								<li class="nav-item dropdown nav-w">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="false">
-										車系介紹
-									</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<div id="laba">       
-										<a class="dropdown-item" href="#laba1">FIT</a>
-									</div>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#laba2">HR-V</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#laba3">CR-V</a>
-			
-									</div>
-								</li>
-								<li class="nav-item dropdown nav-w">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="false">
-										生活專區
-									</a>
-									<div class="dropdown-menu nav-w" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="#">車主服務</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">賀卡專區</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">安全知識</a>
-										<div class="dropdown-divider line-red"</div>
-										</div>
-								</li>
-								<li class="nav-item dropdown nav-w">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="false">
-										據點查詢
-									</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="#">北部</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">中部</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">南部</a>
-			
-									</div>
-								</li>
-							</ul>
-							</div>
-						</div>
-				</nav>
 
-		<div class="container">
+
+		  <nav class="navbar navbar-expand-md navbar-light bg-light">
+					<div class="container">
+							<a class="navbar-brand d-xl-none" href="/index.html">
+									<img class="logo" src="img/logo.png" alt="">
+							</a>
+							<div class="menuIcon">
+									<span class="icon icon-bars"></span>
+									<span class="icon icon-bars overlay"></span>
+							</div>
+							<div class="overlay-menu">
+									<ul id="menu">
+											<li>
+													<div id="accordion">
+															<div class="card">
+																	<div class="card-header" id="headingOne">
+																			<h5 class="mb-0">
+																					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+																							HOME
+																					</button>
+																			</h5>
+																	</div>
+																	<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+																			<a class="card-body" href="/honda-about/about1.html">VHS.</a>
+																			<a class="card-body" href="/honda-about/about2.html">VHS.</a>
+																			<a class="card-body" href="/honda-about/about3.html">VHS.</a>
+																	</div>
+															</div>
+													</div>
+											</li>
+											<li>
+													<a href="/cars/cars.html">About</a>
+											</li>
+											<li>
+													<a href="/honda-life/honda-life.html">Vehicles</a>
+											</li>
+											<li>
+													<a href="#footer_Start">Contact</a>
+											</li>
+									</ul>
+							</div>
+	
+							<div class="collapse navbar-collapse  " id="navbarSupportedContent">
+									<ul class="navbar-nav w-100 justify-content-around align-items-center">
+											<a class="navbar-brand d-none d-xl-block " href="#">
+													<img src="img/logo.png" alt="">
+											</a>
+											<li class="nav-item dropdown nav-w">
+													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															關於HONDA
+													</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+															<a class="dropdown-item" href="/honda-about/about1.html">品牌故事</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href="/honda-about/about2.html">新聞中心</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href="/honda-about/about3.html">Honda徵才</a>
+	
+													</div>
+											</li>
+											<li class="nav-item dropdown nav-w">
+													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															車系介紹
+													</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+															<a class="dropdown-item" href="/cars/cars.html">BR-V</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href="/cars/cars.html">CR-V</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href="/cars/cars.html">CITY</a>
+	
+													</div>
+											</li>
+											<li class="nav-item dropdown nav-w">
+													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															生活專區
+													</a>
+													<div class="dropdown-menu nav-w" aria-labelledby="navbarDropdown">
+															<a class="dropdown-item" href="/honda-life/honda-life.html">車主服務</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href="/honda-life/honda-life.html">賀卡專區</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href="/honda-life/honda-life.html">安全知識</a>
+															<div class="dropdown-divider line-red"></div>
+													</div>
+	
+											</li>
+											<li class="nav-item dropdown nav-w">
+													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															聯絡我們
+													</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+															<a class="dropdown-item" href="#footer_Start">北部</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href="#footer_Start">中部</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href="#footer_Start">南部</a>
+	
+													</div>
+											</li>
+									</ul>
+							</div>
+					</div>
+			</nav>
+	
+
+		<div class="container-fluid">
 			<header class="codrops-header">
 				
 				<h1>HONDA <span>車系介紹</span></h1>
@@ -852,5 +1130,46 @@ footer {
 				  </div>
 			  </section>
 			</footer>	
+
+
+			<script>
+
+					let menuIcon = document.querySelector('.menuIcon');
+					let nav = document.querySelector('.overlay-menu');
+	
+					menuIcon.addEventListener('click', () => {
+							if (nav.style.transform != 'translateX(0%)') {
+									nav.style.transform = 'translateX(0%)';
+									nav.style.transition = 'transform 0.2s ease-out';
+							} else {
+									nav.style.transform = 'translateX(-100%)';
+									nav.style.transition = 'transform 0.2s ease-out';
+							}
+					});
+	
+	
+					// Toggle Menu Icon ========================================
+					let toggleIcon = document.querySelector('.menuIcon');
+	
+					toggleIcon.addEventListener('click', () => {
+							if (toggleIcon.className != 'menuIcon toggle') {
+									toggleIcon.className += ' toggle';
+							} else {
+									toggleIcon.className = 'menuIcon';
+							}
+					});
+	
+					$(window).resize(function () {
+							wdth = $(window).width();
+							if (wdth > 750) {
+									nav.style.transform = 'translateX(-100%)';
+									nav.style.transition = 'transform 0.2s ease-out';
+									$('.menuIcon').removeClass('toggle');
+							}
+	
+					});
+			</script>
+
+
 	</body>
 </html>

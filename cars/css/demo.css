@@ -144,7 +144,7 @@ a:hover, a:focus {
 .columns p {
 	-webkit-column-break-inside: avoid;
 	-moz-column-break-inside: avoid;
-	column-break-inside: avoid;
+	-column-break-inside: avoid;
 }
 
 svg.polaroid {
