@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+</head>
+<style>
+	 * {
+        box-sizing: border-box;
+        }
+        .navbar-brand img {
+            height: 70px;
+        }
+      
+        ul.navbar-nav li {
+            min-width: 110px;
+
+        }
+        .content2{
+              font-family: Microsoft JhengHei;
+              box-sizing: border-box;
+             font-size: 20px;
+ 
+        }
+         .dropdown-menu{
+             background-color: #f8f9fa;
+             border-radius: 0;
+         }
+         .dropdown-menu .show{
+            transition: all 0.3s ease-out;
+           transition-duration: 0.3s;
+         }
+           
+        
+         .navbar{
+         box-shadow: 0px -3px 10px 3px #000000,
+                     0px -3px 13px 2px #000000;
+         }
+  /* 8888888888888888888888888888888888888888888888888888888888 */
+
+
+        .box4{
+            width: 90%;
+            height: 47vw;
+            margin: 20px auto;
+        }
+        .pic4{
+            width: 60%;
+            height: 45vw;
+            background-image: url("img/台灣廠.jpg");
+            box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.69);
+            overflow:hidden;
+            display: inline-block;
+            background-size: cover;
+            background-position:center;
+            float: left ; 
+
+        }
+        .word4{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            width: 40%;
+            height: 45vw;
+            float: left ; 
+}
+        .box5{
+            width: 90%;
+            margin: 30px auto;
+            text-align: center;
+}
+
+        .box6{
+            width: 90%;
+            height: 35vw;
+            margin: 40px auto;
+}
+        .word6{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            width: 60%;
+            height: 30vw;
+            float: left ; 
+         font-size: 18.5px;
+        
+        }
+        .pic6{
+            width: 40%;
+            height: 30vw;
+            background-image: url("img/ht10004.jpg");
+            background-size: cover;
+            background-position:center;
+            float: left ; 
+                        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.69);
+            overflow:hidden;
+            display: inline-block;
+
+
+  /* 8888888888888888888888888888888888888888888888888888888888 */       
+        @media  screen and (max-width:768px){
+        .nav-w{
+           width: 100%;
+           text-align: center;
+          } 
+        .dropdown-item{
+         text-align: center;   
+          }
+
+          }
+         
+         @media screen and (max-width: 568px){
+           .dropdown-menu{
+	        background-color:#373737 ;
+	        border-radius: 0;
+	        border: 0;
+	         }
+	       .dropdown-item{
+	        color: #f8f9fa;
+	        padding: 10px;
+	       }
+	       .dropdown-divider{
+	        display: none;
+	       }
+            .pic6{
+            width: 35%;
+                        height: 30vw;
+        }
+            .word6{
+            width: 65%;
+                        height: 30vw;
+        }
+
+         }
+
+</style>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand d-xl-none" href="#">
+                <img class="logo" src="logo.png"  alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+                <ul class="navbar-nav w-100 justify-content-around align-items-center">
+                    <a class="navbar-brand d-none d-xl-block " href="#">
+                        <img src="logo.png" alt="">
+                    </a>
+                    <li class="nav-item dropdown nav-w">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            關於HONDA
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">企業願景</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">生產中心</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">The Power of Dreams</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown nav-w">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            車系介紹
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">BR-V</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">CR-V</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">CITY</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown nav-w">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            生活專區
+                        </a>
+                        <div class="dropdown-menu nav-w" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">車主服務</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">賀卡專區</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">安全知識</a>
+                            <div class="dropdown-divider line-red" </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown nav-w">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            據點查詢
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">北部</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">中部</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">南部</a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     <div class="content2">
+    <div class="box4">
+        <div class="pic4"></div>
+        <div class="word4"><p>嚴謹製程<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;責無旁貸</p></div>
+    </div>
+        <div class="box5"><p>Honda Taiwan成立初即購入屏東廠現址建設綠色環保生產中心，並於2007年分割
+獨立為「台灣本田汽車股份有限公司」。</p>
+  </div>
+        <div class="line5"><HR color="#HHHHHH" size="10" width="95%"></div>
+      <div class="box6">
+         <div class="word6"><p>地點：屏東市前進里大溪路337號<br>
+土地面積：約57,000坪(18.8萬平方米)<br>
+廠房面積：約19,700坪 (6.5萬平方米)<br>
+資本額：約新台幣21億元<br>
+生產車種：CR-V、HR-V、FIT、CITY<br>
+生產工程：溶接、塗裝、組裝、檢查<br>
+開始生產：2002 年底</p></div>
+        <div class="pic6"></div>
+       
+    </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> 
+	
+</body>
+</html>
