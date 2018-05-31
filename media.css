@@ -861,8 +861,8 @@
 @media screen and ( max-width:460px) {
 
     .navbar-brand img {
-        width: 50%;
-        height: 50px;
+        width: 60%;
+        height: 60px;
     }
     .but{
         width: 12vw;
