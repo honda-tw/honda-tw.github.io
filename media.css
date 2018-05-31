@@ -266,13 +266,13 @@
 
 @media screen and ( max-width: 1024px) {
     .container {
-        width: 90%;
+        width: 80%;
     }
     .navbar-brand img {
-        height: 60px;
+        height: 80px;
     }
     .navbar-nav li>a {
-        font-size: 100%;
+        font-size: 90%;
     }
     .dropdown-menu>a {
         font-size: 90%;
@@ -400,6 +400,7 @@
         width: 100%;
     }
     .navbar-brand img {
+        width: 60%;
         height: 60px;
     }
     .navbar-nav li>a {
@@ -517,6 +518,7 @@
 }
 
 @media screen and ( max-width:576px) {
+
     .car1 {
         background-image: url('image/mcar1.png');
     }
@@ -860,7 +862,7 @@
 
     .navbar-brand img {
         width: 70%;
-        height: 50px;
+        height: 70px;
     }
     .but{
         width: 12vw;
