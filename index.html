@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="swiper-4.2.6/dist/css/swiper.min.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="media.css">
+	<title>Honda</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		@media(max-width: 767px) {
+			.menuIcon {
+				cursor: pointer;
+				display: block;
+				position: absolute;
+				right: 15px;
+				top: 8px;
+				height: 30px;
+				width: 35px;
+				z-index: 12;
+
+			}
+
+			/* Icon Bars */
+			.icon-bars {
+				background: rgb(13, 26, 38);
+				position: absolute;
+				left: 1px;
+				top: 80%;
+				height: 2px;
+				width: 30px;
+				-webkit-transition: 0.4s;
+				transition: 0.4s;
+			}
+
+			.icon-bars::before {
+				background: rgb(13, 26, 38);
+				content: '';
+				position: absolute;
+				left: 0;
+				top: -8px;
+				height: 2px;
+				width: 30px;
+				/*     -webkit-transition: top 0.2s ease 0.3s;
+    transition: top 0.2s ease 0.3s; */
+				-webkit-transition: 0.3s width 0.4s;
+				transition: 0.3s width 0.4s;
+			}
+
+			.icon-bars::after {
+				margin-top: 0px;
+				background: rgb(13, 26, 38);
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -8px;
+				height: 2px;
+				width: 30px;
+				/*     -webkit-transition: top 0.2s ease 0.3s;
+    transition: top 0.2s ease 0.3s; */
+				-webkit-transition: 0.3s width 0.4s;
+				transition: 0.3s width 0.4s;
+			}
+
+			/* Bars Shadows */
+			.icon-bars.overlay {
+				background: rgb(97, 114, 129);
+				background: #D64358;
+				width: 20px;
+				animation: middleBar 3s infinite 0.5s;
+				-webkit-animation: middleBar 3s infinite 0.5s;
+			}
+			@keyframes middleBar {
+				0% {
+					width: 0px
+				}
+				50% {
+					width: 20px
+				}
+				100% {
+					width: 0px
+				}
+			}
+			@-webkit-keyframes middleBar {
+				0% {
+					width: 0px
+				}
+				50% {
+					width: 20px
+				}
+				100% {
+					width: 0px
+				}
+			}
+
+			.icon-bars.overlay::before {
+				background: rgb(97, 114, 129);
+				background: #D64358;
+				width: 10px;
+				animation: topBar 3s infinite 0.2s;
+				-webkit-animation: topBar 3s infinite 0s;
+			}
+			@keyframes topBar {
+				0% {
+					width: 0px
+				}
+				50% {
+					width: 10px
+				}
+				100% {
+					width: 0px
+				}
+			}
+			@-webkit-keyframes topBar {
+				0% {
+					width: 0px
+				}
+				50% {
+					width: 10px
+				}
+				100% {
+					width: 0px
+				}
+			}
+
+			.icon-bars.overlay::after {
+				background: rgb(97, 114, 129);
+				background: #D64358;
+				width: 15px;
+				animation: bottomBar 3s infinite 1s;
+				-webkit-animation: bottomBar 3s infinite 1s;
+			}
+			@keyframes bottomBar {
+				0% {
+					width: 0px
+				}
+				50% {
+					width: 15px
+				}
+				100% {
+					width: 0px
+				}
+			}
+			@-webkit-keyframes bottomBar {
+				0% {
+					width: 0px
+				}
+				50% {
+					width: 15px
+				}
+				100% {
+					width: 0px
+				}
+			}
+
+			.menuIcon.toggle .icon-bars {
+				top: 20px;
+				transform: translate3d(0, 5px, 0) rotate(135deg);
+				transition-delay: 0.1s;
+				transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			}
+
+			.menuIcon.toggle .icon-bars::before {
+				top: 20;
+				transition-delay: 0.1s;
+				opacity: 0;
+			}
+
+			.menuIcon.toggle .icon-bars::after {
+				top: 10px;
+				transform: translate3d(0, -10px, 0) rotate(-270deg);
+				transition-delay: 0.1s;
+				transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			}
+
+			.menuIcon.toggle .icon-bars.overlay {
+				width: 20px;
+				opacity: 0;
+				-webkit-transition: all 0s ease 0s;
+				transition: all 0s ease 0s;
+
+			}
+		}
+
+		.overlay-menu {
+			background: #3a3a3a;
+			color: black;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 69px;
+			right: 0;
+			padding-right: 15px;
+			transform: translateX(-100%);
+			width: 100vw;
+
+			height: calc(100vh - 69px);
+			-webkit-transition: transform 0.2s ease-out;
+			transition: transform 0.2s ease-out;
+			z-index: 999;
+			font-size: 15px;
+			text-align: center;
+		}
+
+
+		.navbar-brand {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.navbar .card {
+			border: none;
+			background: none;
+		}
+
+		button {
+			padding: 0;
+		}
+
+		.navbar .card-header {
+			font-size: 27px;
+			padding-left: 0;
+			padding-right: 0;
+			padding-bottom: 10px;
+			padding-top: 20px;
+			margin-bottom: 0;
+			border: none;
+			background-color: rgba(0, 0, 0, 0);
+		}
+
+		.navbar .card-header h5 {
+			display: flex;
+			justify-content: flex-end;
+
+		}
+
+		.navbar .card-body {
+			padding: 0;
+			display: flex;
+			justify-content: flex-end;
+			color: #f8f9fa;
+		}
+
+		.navbar .btn {
+			font-size: 27px;
+			border: none;
+			padding: 0;
+		}
+
+		.navbar .btn-link {
+			color: #fff;
+		}
+
+		#collapseOne a {
+			font-size: 15px;
+		}
+
+		.overlay-menu ul,
+		.overlay-menu li {
+			display: block;
+			position: relative;
+			color: #353333;
+
+		}
+
+		.overlay-menu li a {
+			display: block;
+			color: #FFf;
+			font-size: 1.8em;
+			letter-spacing: 4px;
+			/*   opacity: 0; */
+			padding: 10px 0;
+			text-align: right;
+			text-transform: uppercase;
+			-webkit-transition: color 0.3s ease;
+			transition: color 0.3s ease;
+			/*   -webkit-transition: 0.2s opacity 0.2s ease-out;
+  transition: 0.2s opacity 0.2s ease-out; */
+		}
+
+		.overlay-menu li a:hover,
+		.overlay-menu li a:active {
+			color: gray(28, 121, 184);
+			-webkit-transition: color 0.3s ease;
+			transition: color 0.3s ease;
+		}
+
+		@media screen and ( max-width: 768px) {
+			.navbar-brand img {
+				width: 50%;
+				height: 53px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand d-xl-none" href="/index.html">
+				<img class="logo" src="image/logo.png" alt="">
+			</a>
+			<div class="menuIcon">
+				<span class="icon icon-bars"></span>
+				<span class="icon icon-bars overlay"></span>
+			</div>
+			<div class="overlay-menu">
+				<ul id="menu">
+					<li>
+						<div id="accordion">
+							<div class="card">
+								<div class="card-header" id="headingOne">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											HOME
+										</button>
+									</h5>
+								</div>
+								<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+									<a class="card-body" href="/honda-about/about1.html">VHS.</a>
+									<a class="card-body" href="/honda-about/about2.html">VHS.</a>
+									<a class="card-body" href="/honda-about/about3.html">VHS.</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="/cars/cars.html">Abot</a>
+					</li>
+					<li>
+						<a href="/honda-life/honda-life.html">Vehicles</a>
+					</li>
+					<li>
+						<a href="#footer_Start">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="collapse navbar-collapse  " id="navbarSupportedContent">
+				<ul class="navbar-nav w-100 justify-content-around align-items-center">
+					<a class="navbar-brand d-none d-xl-block " href="#">
+						<img src="image/logo.png" alt="">
+					</a>
+					<li class="nav-item dropdown nav-w">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
+							關於HONDA
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/honda-about/about1.html">品牌故事</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/honda-about/about2.html">新聞中心</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/honda-about/about3.html">Honda徵才</a>
+
+						</div>
+					</li>
+					<li class="nav-item dropdown nav-w">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
+							車系介紹
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/cars/cars.html">BR-V</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/cars/cars.html">CR-V</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/cars/cars.html">CITY</a>
+
+						</div>
+					</li>
+					<li class="nav-item dropdown nav-w">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
+							生活專區
+						</a>
+						<div class="dropdown-menu nav-w" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/honda-life/honda-life.html">車主服務</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/honda-life/honda-life.html">賀卡專區</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/honda-life/honda-life.html">安全知識</a>
+							<div class="dropdown-divider line-red"></div>
+						</div>
+
+					</li>
+					<li class="nav-item dropdown nav-w">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
+							聯絡我們
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#footer_Start">北部</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#footer_Start">中部</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#footer_Start">南部</a>
+
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<div class="bg">
+		<!-- Swiper -->
+		<div id="head-swiper-container" class="headpic swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a-1.jpg" alt="">
+				</div>
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a-2.jpg" alt="">
+				</div>
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a-3.jpg" alt="">
+				</div>
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a-4.jpg" alt="">
+				</div>
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a-5.jpg" alt="">
+				</div>
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a-6.jpg" alt="">
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+		</div>
+		<video id="headvideo" class="video" src="a.mp4" autoplay loop muted></video>
+	</div>
+
+	<div class="A_container">
+		<div class="model_block mbt">
+			<div class="model_car">
+				<ul class="nav w-100 h-100">
+					<li class="col-4 col-sm-2 h-100 d-inline-block">
+						<a class="active" data-toggle="tab" href="#car1part">
+							<div class="sixcar car1"></div>
+						</a>
+					</li>
+					<li class="col-4 col-sm-2 h-100 d-inline-block">
+						<a data-toggle="tab" href="#car2part">
+							<div class="sixcar car2"></div>
+						</a>
+					</li>
+					<li class="col-4 col-sm-2 h-100 d-inline-block">
+						<a data-toggle="tab" href="#car3part">
+							<div class="sixcar car3"></div>
+						</a>
+					</li>
+					<li class="col-4 order-5 col-sm-2 h-100 d-inline-block">
+						<a data-toggle="tab" href="#car4part">
+							<div class="sixcar car4"></div>
+						</a>
+					</li>
+					<li class="col-4 order-4 col-sm-2 h-100 d-inline-block">
+						<a data-toggle="tab" href="#car5part">
+							<div class="sixcar car5"></div>
+						</a>
+					</li>
+					<li class="col-4 order- col-sm-2 h-100 d-inline-block">
+						<a data-toggle="tab" href="#car6part">
+							<div class="sixcar car6"></div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="tab-content h-100" id="pills-tabContent">
+				<!-- Tab page 1 -->
+				<div class="tab-pane h-100 fade show active" id="car1part" role="tabpanel" aria-labelledby="pills-home-tab">
+					<div class="model_display">
+						<div class="display_left">
+							<div class="swiper-container cube">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image:url(image/car1-head.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car1-left.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car1-back.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car1-right.jpg)"></div>
+								</div>
+							</div>
+							<!-- Add Pagination -->
+						</div>
+						<div class="display_right">
+							<div class="text">
+								<p>HR-V</p>
+								<p>跨界生活隨心啟動</p>
+								<p>NT $ 849,000</p>
+								<div class="but">探索</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tab page 2 -->
+				<div class="tab-pane h-100 fade" id="car2part" role="tabpanel" aria-labelledby="pills-profile-tab">
+					<div class="model_display">
+						<div class="display_left">
+							<div class="swiper-container cube">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image:url(image/car2-head.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car2-left.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car2-back.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car2-right.jpg)"></div>
+								</div>
+							</div>
+							<!-- Add Pagination -->
+						</div>
+						<div class="display_right">
+							<div class="text">
+								<p>BR-V</p>
+								<p>輕跑旅新浪潮</p>
+								<p>NT $ 749,000</p>
+								<div class="but">探索</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tab page 3 -->
+				<div class="tab-pane  h-100 fade" id="car3part" role="tabpanel" aria-labelledby="pills-contact-tab">
+					<div class="model_display">
+						<div class="display_left">
+							<div class="swiper-container cube">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image:url(image/head.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/left.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/back.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/right.jpg)"></div>
+								</div>
+							</div>
+							<!-- Add Pagination -->
+						</div>
+						<div class="display_right">
+							<div class="text">
+								<p>BR-VI</p>
+								<p>日本原裝私家座艙</p>
+								<p>NT $ 799,000</p>
+								<div class="but">探索</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Tab page 4 -->
+				<div class="tab-pane  h-100 fade" id="car4part" role="tabpanel" aria-labelledby="pills-contact-tab">
+					<div class="model_display">
+						<div class="display_left">
+							<div class="swiper-container cube">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image:url(image/car4-head.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car4-left.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car4-back.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car4-right.jpg)"></div>
+								</div>
+							</div>
+							<!-- Add Pagination -->
+						</div>
+						<div class="display_right">
+							<div class="text">
+								<p>CITY</p>
+								<p>2018年度環保車</p>
+								<p>NT $ 690,000</p>
+								<div class="but">探索</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tab page 5 -->
+				<div class="tab-pane  h-100 fade" id="car5part" role="tabpanel" aria-labelledby="pills-contact-tab">
+					<div class="model_display">
+						<div class="display_left">
+							<div class="swiper-container cube">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image:url(image/car5-head.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car5-left.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car5-back.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car5-right.jpg)"></div>
+								</div>
+							</div>
+							<!-- Add Pagination -->
+						</div>
+						<div class="display_right">
+							<div class="text">
+								<p>FIT</p>
+								<p>最佳國產小型車</p>
+								<p>NT $ 689,000</p>
+								<div class="but">探索</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tab page 6 -->
+				<div class="tab-pane  h-100 fade" id="car6part" role="tabpanel" aria-labelledby="pills-contact-tab">
+					<div class="model_display">
+						<div class="display_left">
+							<div class="swiper-container cube">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image:url(image/car6-head.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car6-left.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car6-back.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(image/car6-right.jpg)"></div>
+								</div>
+							</div>
+							<!-- Add Pagination -->
+						</div>
+						<div class="display_right">
+							<div class="text">
+								<p>CR-V</p>
+								<p>全球暢銷都會休旅</p>
+								<p>NT $ 919,000</p>
+								<div class="but">探索</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pic_section mbt">
+			<div class="box box1"></div>
+			<div class="box box2"></div>
+			<div class="box box3"></div>
+			<div class="box box4"></div>
+			<div class="box box5"></div>
+			<div class="box box6"></div>
+		</div>
+
+		<div class="news_bag mbt">
+			<div class="news_container">
+				<div class="news_title">
+					<h1>最新活動消息</h1>
+				</div>
+				<div class="news_block">
+					<div class="news_box">
+						<div class="pic pic1"></div>
+						<div class="news_text">
+							<div class="news_text1">
+								<p>最新購車方案</p>
+							</div>
+							<div class="news_text2">
+								<p>BR-V全新配備升級</p>
+								<button type="button" class="btn btn-danger btn-sm">more</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="news_box">
+						<div class="pic pic2"></div>
+						<div class="news_text">
+							<div class="news_text1">
+								<p>擁抱Honda方案</p>
+							</div>
+							<div class="news_text2">
+								<p>ARE YOU TYPE R?</p>
+								<button type="button" class="btn btn-danger btn-sm">more</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="news_box">
+						<div class="pic pic3"></div>
+						<div class="news_text">
+							<div class="news_text1">
+								<p>HONDA innovation award 2018</p>
+							</div>
+							<div class="news_text2">
+								<p>打造未來智慧移動趨勢</p>
+								<button type="button" class="btn btn-danger btn-sm">more</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="crv-container">
+			<div class="CRV_section mbt">
+				<div class="CRV_text">
+					<div class="CRV_text1">
+						<h1>CITY</h1>
+					</div>
+					<div class="CRV_text2">
+						<p>
+							<b>Honda為你再次超越</b>
+						</p>
+					</div>
+					<div class="CRV_text3">
+						<p>
+							<b>獻給每個為家人前進的你</b>
+						</p>
+					</div>
+				</div>
+				<div id="car" class="CRV_car"></div>
+				<div class="CRV_youtube">
+					<iframe id="CRV_video" width="100%" height="100%" src="https://www.youtube.com/embed/MZwSDq4fRvU?autoplay=1&mute=1" frameborder=""
+					 allow="autoplay ; encrypted-media ; " allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		<div class="media-container">
+			<div class="media_section mbt">
+				<div class="media_title">
+					<h1>Honda Social Media</h1>
+				</div>
+				<div class="media_block">
+					<div class="media_box">
+						<div class="media_pic media_pic1"></div>
+						<div class="media_text">
+							<div class="media_smalltitle">
+								<h2>Instagram</h2>
+							</div>
+							<div class="media_text_p">
+								<p>飽覽HONDA車款精選圖片，激發更多馳騁靈感歡迎加入我們的Honda Taiwan，讓科技與質感融入您的生活品味。
+								</p>
+								<div class="media_icon icon_ig"></div>
+							</div>
+						</div>
+					</div>
+					<div class="media_box">
+						<div class="media_pic media_pic2"></div>
+						<div class="media_text">
+							<div class="media_smalltitle">
+								<h2>Facebook</h2>
+							</div>
+							<div class="media_text_p">
+								<p>捕捉第一手honda熱門情報！搶先看Honda Taiwan粉絲團最新動態 !! 邀請車主們一起分享光芒的榮耀與駕馭體驗！</p>
+								<div class="media_icon icon_fb"></div>
+							</div>
+						</div>
+					</div>
+					<div class="media_box">
+						<div class="media_pic media_pic3"></div>
+						<div class="media_text">
+							<div class="media_smalltitle">
+								<h2>YouTube</h2>
+							</div>
+							<div class="media_text_p">
+								<p>觀賞honda智能科技的影音，給您最震撼的視覺享受 !! 訂閱本田Honda Taiwan專屬頻道，持續追求最新進化未來車款。</p>
+								<div class="media_icon icon_youtube"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="service-container">
+			<div class="sevice">
+				<div class="sevice_title">
+					<h1>
+						<b>全新HONDA精彩呈獻</b>
+					</h1>
+				</div>
+				<div class="sevice_box1"></div>
+				<div class="sevice_box2">
+					<div class="email_box">
+						<p>訂閱電子報
+
+						</p>
+						<input class="input" type="email" placeholder="請輸入您的email">
+						<button class="button">確認</button>
+					</div>
+				</div>
+				<div class="sevice_block">
+					<div class="sevice_box3 b31"></div>
+					<div class="sevice_box3 b32"></div>
+					<div class="sevice_box3 b33"></div>
+					<div class="sevice_box3 b34"></div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			Content
+		</main>
+		<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
+		<footer class="flex-rw footerclass">
+
+			<ul class="footer-list-top">
+				<li>
+					<h4 class="footer-list-header">最新消息</h4>
+				</li>
+				<li>
+					<a href='/shop/about-mission' class="generic-anchor footer-list-anchor" itemprop="significantLink">購車優惠</a>
+				</li>
+				<li>
+					<a href='/promos.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">品牌活動</a>
+				</li>
+				<li>
+					<a href='/retailers/new-retailers.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">新聞中心</a>
+				</li>
+				<li>
+					<a href='/job-openings.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">展示據點</a>
+				</li>
+
+			</ul>
+			<ul class="footer-list-top">
+				<li>
+					<h4 class="footer-list-header">車款介紹</h4>
+				</li>
+				<li>
+					<a href='/Angels/cat/id/70' class="generic-anchor footer-list-anchor">全車車系</a>
+				</li>
+				<li>
+					<a href='/Home-Decor/cat/id/64' class="generic-anchor footer-list-anchor">購車專區</a>
+				</li>
+				<li>
+					<a href='/Mugs/cat/id/32' class="generic-anchor footer-list-anchor">預約試乘</a>
+				</li>
+				<li>
+					<a href='/Pet-Lover/cat/id/108' class="generic-anchor footer-list-anchor">原廠保證</a>
+				</li>
+			</ul>
+			<ul class="footer-list-top">
+				<li id='help'>
+					<h4 class="footer-list-header">車主專區</h4>
+				</li>
+				<li>
+					<a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">愛車資訊</a>
+				</li>
+				<li>
+					<a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">愛車服務</a>
+				</li>
+				<li id='find-a-store'>
+					<a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">服務據點</a>
+				</li>
+				<li id='user-registration'>
+					<a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">預約保修</a>
+				</li>
+			</ul>
+			<ul class="footer-list-top">
+				<li id='help'>
+					<h4 class="footer-list-header">購車專區</h4>
+				</li>
+				<li>
+					<a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">預約試乘</a>
+				</li>
+				<li>
+					<a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">展示據點</a>
+				</li>
+				<li id='find-a-store'>
+					<a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">推薦業代</a>
+				</li>
+				<li id='user-registration'>
+					<a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">購車試算</a>
+				</li>
+
+			</ul>
+			<section class="footer-social-section flex-rw">
+				<span class="footer-social-overlap footer-social-connect">
+					CONNECT
+					<span class="footer-social-small">with</span> US
+				</span>
+				<span class="footer-social-overlap footer-social-icons-wrapper">
+					<a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink">
+						<i class="fa fa-pinterest"></i>
+					</a>
+					<a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink">
+						<i class="fa fa-facebook"></i>
+					</a>
+					<a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a href="https://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink">
+						<i class="fa fa-instagram"></i>
+					</a>
+					<a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube"
+					 itemprop="significantLink">
+						<i class="fa fa-youtube"></i>
+					</a>
+					<a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink">
+						<i class="fa fa-google-plus"></i>
+					</a>
+				</span>
+			</section>
+			<section class="footer-bottom-section flex-rw">
+				<div class="footer-bottom-wrapper">
+					<i class="fa fa-copyright" role="copyright">
+
+					</i> 2018 HONDA in
+					<address class="footer-address" role="company address">Taiwan, Tpi</address>
+					<span class="footer-bottom-rights"> - All Rights Reserved - </span>
+				</div>
+				<div class="footer-bottom-wrapper">
+					<a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> |
+					<a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+				</div>
+			</section>
+		</footer>
+
+
+
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		 crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		 crossorigin="anonymous"></script>
+		<script src="swiper-4.2.6/dist/js/swiper.min.js"></script>
+
+		<script>
+			$(window).scroll(function () {
+				// 取得目前捲軸高度
+				var window_height = $(window).scrollTop();
+				var top = $('#car').offset().top - 100;
+				var bottom = top + $('#car').outerHeight() + 100;
+				var middle = window_height + $(window).height();
+
+				if (middle > top && middle < bottom) {
+					var left = (((middle - top) / (bottom - top) * (-35)) + 35) * -1;
+					//console.log(left);
+					$('#car').css("left", left + "%");
+				}
+
+				// 測試用，再檢查元素的console分頁中顯示scrollTop的高度
+				//console.log('scrollTop:' + window_height);
+				//console.log(top);
+			});
+			var swiper = new Swiper('.cube', {
+				effect: 'cube',
+				grabCursor: true,
+				cubeEffect: {
+					shadow: true,
+					slideShadows: false,
+					shadowOffset: 20,
+					shadowScale: 0.94,
+				},
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+				},
+			});
+
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var paneTarget = $(e.target).attr('href');
+				var $thePane = $('.tab-pane' + paneTarget);
+				var paneIndex = $thePane.index();
+				if ($thePane.find('.cube').length > 0 && 0 === $thePane.find('.swiper-slide-active').length) {
+					swiper[paneIndex].update();
+				}
+				swiper[paneIndex].slideToLoop(0, 1000);
+			});
+
+			let menuIcon = document.querySelector('.menuIcon');
+			let nav = document.querySelector('.overlay-menu');
+
+			menuIcon.addEventListener('click', () => {
+				if (nav.style.transform != 'translateX(0%)') {
+					nav.style.transform = 'translateX(0%)';
+					nav.style.transition = 'transform 0.2s ease-out';
+				} else {
+					nav.style.transform = 'translateX(-100%)';
+					nav.style.transition = 'transform 0.2s ease-out';
+				}
+			});
+
+
+			// Toggle Menu Icon ========================================
+			let toggleIcon = document.querySelector('.menuIcon');
+
+			toggleIcon.addEventListener('click', () => {
+				if (toggleIcon.className != 'menuIcon toggle') {
+					toggleIcon.className += ' toggle';
+				} else {
+					toggleIcon.className = 'menuIcon';
+				}
+			});
+
+			$(window).resize(function () {
+				wdth = $(window).width();
+				if (wdth > 750) {
+					nav.style.transform = 'translateX(-100%)';
+					nav.style.transition = 'transform 0.2s ease-out';
+					$('.menuIcon').removeClass('toggle');
+				}
+				console.log(wdth)
+
+			});
+
+
+		</script>
+		<script>
+			var swiper2 = new Swiper('#head-swiper-container', {
+				spaceBetween: 30,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
+		</script>
+</body>
+</html>
