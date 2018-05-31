@@ -337,7 +337,7 @@
 							車系介紹
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="cars/cars.html">BR-V</a>
+							<a class="dropdown-item" href="#">BR-V</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="#">CR-V</a>
 							<div class="dropdown-divider"></div>
@@ -379,7 +379,26 @@
 	</nav>
 
 
-	<div>
+	<div class="bg">
+		<!-- Swiper -->
+		 <div class="headpic swiper-container2">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a1.jpg" alt="">
+				</div>
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a2.jpg" alt="">
+				</div>
+				<div class="swiper-slide a3">
+					<img class="a1" src="image/a3.jpg" alt="">
+				</div>
+				<div class="swiper-slide a4">
+					<img class="a1" src="image/a4.jpg" alt="">
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination2"></div>
+		</div> 
 		<video id="headvideo" class="video" src="a.mp4" autoplay loop muted></video>
 	</div>
 
@@ -936,9 +955,17 @@
 			});
 
 
-
 		</script>
-
+		   
+		   <script>
+			var swiper = new Swiper('.swiper-container2', {
+			  spaceBetween: 30,
+			  pagination: {
+				el: '.swiper-pagination2',
+				clickable: true,
+			  },
+			});
+		  </script>
 
 
 		<script>
