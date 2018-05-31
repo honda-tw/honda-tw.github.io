@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+     <link rel="stylesheet" href="swiper.min.css">
+</head>
+<style>
+	 * {
+        box-sizing: border-box;
+        }
+        .navbar-brand img {
+            height: 70px;
+        }
+      
+        ul.navbar-nav li {
+            min-width: 110px;
+
+        }
+         .dropdown-menu{
+             background-color: #f8f9fa;
+             border-radius: 0;
+         }
+         .dropdown-menu .show{
+            transition: all 0.3s ease-out;
+           transition-duration: 0.3s;
+         }
+           
+        
+         .navbar{
+         box-shadow: 0px -3px 10px 3px #000000,
+                     0px -3px 13px 2px #000000;
+         }
+
+  /* 8888888888888888888888888888888888888888888888888888888888 */    
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      margin: 5px 0 20px 0 ;
+      width: 100%;
+      height: 70vw;
+
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-slide .swiper-slide1{
+            width: 100%;
+            height: 70vw;
+             background-image: url("img/輪1.jpg");
+            background-size: cover;
+            background-position:center;
+            z-index: 999 ;
+    }
+    .swiper-slide .swiper-slide2{
+            width: 100%;
+            height: 70vw;
+             background-image: url("img/輪2.jpg");
+            background-size: cover;
+            background-position:center;
+            z-index: 999 ;
+    }
+    .swiper-slide .swiper-slide3{
+            width: 100%;
+            height: 70vw;
+             background-image: url("img/輪3.jpg");
+            background-size: cover;
+            background-position:center;
+            z-index: 999 ;
+    }
+    .box7{
+            width: 100%;
+            height: 60vw;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+    }
+
+
+
+
+
+
+/* 8888888888888888888888888888888888888888888888888888888888 */      
+        @media  screen and (max-width:768px){
+
+        .nav-w{
+           width: 100%;
+           text-align: center;
+          } 
+        .dropdown-item{
+         text-align: center;   
+         } 
+         
+         @media screen and (max-width: 568px){
+           .dropdown-menu{
+	        background-color:#373737 ;
+	        border-radius: 0;
+	        border: 0;
+	         }
+	       .dropdown-item{
+	        color: #f8f9fa;
+	        padding: 10px;
+	       }
+	       .dropdown-divider{
+	        display: none;
+	       }
+
+         }
+
+</style>
+<body>
+        <script src="swiper.min.js"></script>
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand d-xl-none" href="#">
+                <img class="logo" src="logo.png"  alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+                <ul class="navbar-nav w-100 justify-content-around align-items-center">
+                    <a class="navbar-brand d-none d-xl-block " href="#">
+                        <img src="logo.png" alt="">
+                    </a>
+                    <li class="nav-item dropdown nav-w">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            關於HONDA
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">企業願景</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">生產中心</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">The Power of Dreams</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown nav-w">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            車系介紹
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">BR-V</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">CR-V</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">CITY</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown nav-w">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            生活專區
+                        </a>
+                        <div class="dropdown-menu nav-w" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">車主服務</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">賀卡專區</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">安全知識</a>
+                            <div class="dropdown-divider line-red" </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown nav-w">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            據點查詢
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">北部</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">中部</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">南部</a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><div class="swiper-slide1"></div>
+      </div>
+      <div class="swiper-slide"> <div class="swiper-slide2"></div>  
+        </div>
+      <div class="swiper-slide"><div class="swiper-slide3"></div>  
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+     <div class="box7"><iframe width="80%" height="100%" src="https://www.youtube.com/embed/XH5oXl3NG68" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
+
+  <!-- Swiper JS -->
+  <script src="../dist/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> 
+	
+</body>
+</html>
