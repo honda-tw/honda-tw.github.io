@@ -227,7 +227,7 @@
 			background: none;
 		}
 
-		button {
+		.button {
 			padding: 0;
 		}
 
@@ -1003,12 +1003,18 @@
 		</script>
 		<script>
 			var swiper2 = new Swiper('#head-swiper-container', {
+				autoplay: {
+					delay: 2000,
+				},
+				loop : true,
 				spaceBetween: 30,
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
+
 				},
 			});
 		</script>
 </body>
+
 </html>
