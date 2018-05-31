@@ -43,7 +43,7 @@ a:hover, a:focus {
 	margin: 0 auto;
 	padding: 9em 2em;
 	text-align: center;
-	background-image: url('/img/honda-nsx.jpg');
+	background-image: url('../img/honda-nsx.jpg');
 	background-position:center;
 	background-size: cover;
 	color:khaki;
@@ -144,7 +144,7 @@ a:hover, a:focus {
 .columns p {
 	-webkit-column-break-inside: avoid;
 	-moz-column-break-inside: avoid;
-	column-break-inside: avoid;
+	-column-break-inside: avoid;
 }
 
 svg.polaroid {
