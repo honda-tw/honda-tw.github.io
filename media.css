@@ -1,0 +1,922 @@
+@media screen and ( min-width: 2500px) {
+    .container {
+        max-width: 80%;
+    }
+    .navbar-brand img {
+        height: 160px;
+    }
+    .navbar-nav li>a {
+        font-size: 190%;
+    }
+    .dropdown-menu>a {
+        font-size: 160%;
+    }
+    .display_right p {
+        padding: 10px;
+        font-size: 50px;
+        letter-spacing: 8px;
+        font-family: "Segoe Script";
+        font-weight: bolder;
+        line-height: 60px;
+    }
+    .but {
+        width: 5.5vw;
+        padding: 20px 0px;
+        letter-spacing: 7px;
+        font-size: 35px;
+    }
+    .news_title h1 {
+        font-size: 45px;
+        letter-spacing: 5px;
+        font-family: "微軟正黑體";
+        padding-top: 2%;
+    }
+    .news_text p {
+        font-size: 28px;
+    }
+    .news_text1,
+    .news_text2 {
+        padding-bottom: 25px
+    }
+    .btn {
+        width: 3.5vw;
+        min-height: 1.8vw;
+        font-size: 25px;
+    }
+    .CRV_text1 {
+        font-size: 100px;
+    }
+    .CRV_text2 {
+        font-size: 70px;
+    }
+    .CRV_text3 {
+        font-size: 60px;
+    }
+    .media_title h1 {
+        font-size: 60px;
+        font-family: "微軟正黑體";
+        letter-spacing: 3px;
+    }
+    .media_smalltitle {
+        font-size: 45px;
+        font-family: "微軟正黑體";
+        padding-bottom: 30px;
+        letter-spacing: 2px;
+    }
+    .media_text_p {
+        font-size: 30px;
+        letter-spacing: 10px;
+        line-height: 60px;
+    }
+    .media_icon {
+        width: 14%;
+        height: 18%;
+        position: absolute;
+        bottom: 3%;
+        right: 3%;
+    }
+    .media_section {
+        height: 48vw;
+    }
+    .sevice_title h1 {
+        font-size: 80px;
+        letter-spacing: 8px;
+        font-weight: bold;
+    }
+    .email_box {
+        width: 60%;
+        padding: 3.8%;
+        position: absolute;
+        left: 18%;
+        top: 18%;
+    }
+    .input {
+        width: 43%;
+        height: 1.5vw;
+        position: absolute;
+        top: 27%;
+        left: 35%;
+        font-size: 20px;
+    }
+    .button {
+        min-width: 13%;
+        padding: 1.5% 0%;
+        background-color: #353333;
+        color: white;
+        border: 0;
+        letter-spacing: 8px;
+        border-radius: 3px;
+        font-size: 18px
+    }
+    .email_box p {
+        font-size: 30px;
+        position: absolute;
+        top: 20%;
+        letter-spacing: 5px;
+    }
+    .footer-list-header {
+        font-size: 18px;
+    }
+    .footer-list-anchor {
+        font-size: 4.5em;
+    }
+    .footer-social-connect {
+        font-size: 4.5em;
+    }
+    .footer-social-overlap>a {
+        font-size: 4.5em;
+    }
+    .footer-bottom-wrapper {
+        font-size: 2em;
+    }
+}
+
+@media screen and ( min-width: 1800px) {
+    .container {
+        max-width: 80%;
+    }
+    .navbar-brand img {
+        height: 120px;
+    }
+    .navbar-nav li>a {
+        font-size: 160%;
+    }
+    .dropdown-menu>a {
+        font-size: 130%;
+    }
+    .display_right p {
+        padding: 10px;
+        font-size: 40px;
+        letter-spacing: 8px;
+        font-family: "Segoe Script";
+        font-weight: bolder;
+        line-height: 60px;
+    }
+    .but {
+        width: 5vw;
+        padding: 15px 0px;
+        letter-spacing: 7px;
+        font-size: 25px;
+    }
+    .news_title h1 {
+        font-size: 40px;
+        letter-spacing: 5px;
+        font-family: "微軟正黑體";
+        padding-top: 2%;
+    }
+    .news_text p {
+        font-size: 25px;
+    }
+    .news_text1,
+    .news_text2 {
+        padding-bottom: 10px
+    }
+    .btn {
+        width: 3.3vw;
+        min-height: 1.5vw;
+        font-size: 22px;
+    }
+    .CRV_text1 {
+        font-size: 70px;
+    }
+    .CRV_text2 {
+        font-size: 50px;
+    }
+    .CRV_text3 {
+        font-size: 40px;
+    }
+    .media_title h1 {
+        font-size: 45px;
+        letter-spacing: 3px;
+    }
+    .media_smalltitle {
+        font-size: 35px;
+        padding-bottom: 30px;
+        letter-spacing: 2px;
+    }
+    .media_text_p {
+        font-size: 25px;
+        letter-spacing: 5px;
+        line-height: 50px;
+    }
+    .media_icon {
+        width: 14%;
+        height: 18%;
+        position: absolute;
+        bottom: 3%;
+        right: 3%;
+    }
+    .media_section {
+        height: 48vw;
+    }
+    .sevice_title h1 {
+        font-size: 55px;
+        letter-spacing: 8px;
+        font-weight: bold;
+    }
+    .email_box {
+        width: 60%;
+        padding: 3.8%;
+        position: absolute;
+        left: 18%;
+        top: 22%;
+    }
+    .input {
+        width: 43%;
+        height: 1.5vw;
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        font-size: 20px;
+    }
+    .button {
+        min-width: 13%;
+        padding: 1.5% 0%;
+        letter-spacing: 8px;
+        border-radius: 3px;
+        font-size: 16px
+    }
+    .email_box {
+        position: absolute;
+        left: 13%;
+        top: 18%;
+    }
+    .email_box p {
+        font-size: 20px;
+        position: absolute;
+        top: 20%;
+        letter-spacing: 5px;
+    }
+    .footer-list-header {
+        font-size: 1.8em;
+    }
+    .footer-list-anchor {
+        font-size: 1.8em;
+    }
+    .footer-social-connect {
+        font-size: 4em;
+    }
+    .footer-social-overlap>a {
+        font-size: 4em;
+    }
+    .footer-bottom-wrapper {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and ( max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    .navbar-brand img {
+        height: 60px;
+    }
+    .navbar-nav li>a {
+        font-size: 100%;
+    }
+    .dropdown-menu>a {
+        font-size: 90%;
+    }
+    .model_block {
+        width: 85%;
+        height: 40vw;
+    }
+    .display_right p {
+        padding: 10px;
+        font-size: 23px;
+        letter-spacing: 8px;
+        line-height: 18px;
+    }
+    .but {
+        width: 6vw;
+        padding: 7px 0px;
+        letter-spacing: 7px;
+        font-size: 15px;
+    }
+    .news_bag {
+        width: 100%;
+        height: 30vw;
+    }
+    .news_container {
+        width: 90%;
+        height: 100%;
+    }
+    .news_block {
+        width: 100%;
+        height: 73%;
+    }
+    .news_title h1 {
+        font-size: 23px;
+        letter-spacing: 5px;
+        padding-top: 2%;
+    }
+    .btn {
+        bottom: -50%;
+        position: absolute;
+        right: 2%
+    }
+    .CRV_text1 {
+        font-size: 40px;
+    }
+    .CRV_text2 {
+        font-size: 28px;
+    }
+    .CRV_text3 {
+        font-size: 22px;
+    }
+    .media_title h1 {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+    .media_smalltitle {
+        font-size: 23px;
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+    }
+    .media_text_p {
+        font-size: 16px;
+        letter-spacing: 3px;
+        line-height: 30px;
+    }
+    .media_section {
+        width: 90%;
+        height: 60vw;
+    }
+    .sevice_title h1 {
+        width: 100%;
+        font-size: 40px;
+        letter-spacing: 8px;
+        font-weight: bold;
+    }
+    .email_box {
+        width: 60%;
+        padding: 3.8%;
+        position: absolute;
+        left: 18%;
+        top: 18%;
+    }
+    .input {
+        width: 43%;
+        height: 1.5vw;
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        font-size: 12px;
+    }
+    .button {
+        min-width: 12%;
+        padding: 1% 0%;
+        border: 0;
+        letter-spacing: 3px;
+        border-radius: 3px;
+        font-size: 10px
+    }
+    .email_box p {
+        font-size: 13px;
+        position: absolute;
+        top: 6%;
+        left: 3%;
+        letter-spacing: 3px;
+    }
+    .footer-list-header {
+        font-size: 14px;
+    }
+    .footer-list-anchor {
+        font-size: 1em;
+    }
+    .footer-social-connect {
+        font-size: 2em;
+    }
+    .footer-social-overlap>a {
+        font-size: 1em;
+    }
+    .footer-bottom-wrapper {
+        font-size: 1em;
+    }
+}
+
+@media screen and ( max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .navbar-brand img {
+        height: 60px;
+    }
+    .navbar-nav li>a {
+        font-size: 90%;
+    }
+    .dropdown-menu>a {
+        font-size: 80%;
+    }
+    .model_block {
+        width: 90%;
+        height: 40vw;
+    }
+    .display_right p {
+        padding: 10px;
+        font-size: 20px;
+        letter-spacing: 5px;
+        line-height: 15px;
+    }
+    .but {
+        width: 6vw;
+        padding: 5px 0px;
+        letter-spacing: 5px;
+        font-size: 13px;
+    }
+    .news_bag {
+        width: 100%;
+        height: 30vw;
+    }
+    .news_container {
+        width: 90%;
+        height: 100%;
+    }
+    .news_block {
+        width: 100%;
+        height: 73%;
+    }
+    .news_title h1 {
+        font-size: 20px;
+        letter-spacing: 5px;
+        padding-top: 2%;
+    }
+    .news_text p {
+        font-size: 13px;
+    }
+    .btn {
+        padding: .18rem .3rem;
+        font-size: .575rem;
+        line-height: 1.5;
+        position: absolute;
+        bottom: -80%;
+        right: 0%
+    }
+    .CRV_text1 {
+        font-size: 30px;
+    }
+    .CRV_text2 {
+        font-size: 22px;
+    }
+    .CRV_text3 {
+        font-size: 17px;
+    }
+    .media_title h1 {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    .media_smalltitle {
+        font-size: 18px;
+        padding-bottom: 15px;
+        letter-spacing: 2px;
+    }
+    .media_text_p {
+        font-size: 14px;
+        letter-spacing: 3px;
+        line-height: 25px;
+    }
+    .media_section {
+        width: 90%;
+        height: 66vw;
+    }
+    .sevice_title h1 {
+        font-size: 25px;
+        letter-spacing: 8px;
+    }
+    .email_box {
+        width: 70%;
+        padding: 3.8%;
+        position: absolute;
+        left: 18%;
+        top: 18%;
+    }
+    .input {
+        width: 43%;
+        height: 1.8vw;
+        position: absolute;
+        top: 28%;
+        left: 35%;
+        font-size: 5px;
+    }
+    .button {
+        min-width: 14%;
+        padding: 1% 0%;
+        letter-spacing: 0px;
+        font-size: 7px;
+        position: absolute;
+        top: 20%;
+        right: 4%;
+    }
+    .email_box p {
+        font-size: 8px;
+        position: absolute;
+        top: -5%;
+        left: 3%;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and ( max-width:576px) {
+    .car1 {
+        background-image: url('image/mcar1.png');
+    }
+    .car2 {
+        background-image: url('image/mcar2.png');
+    }
+    .car3 {
+        background-image: url('image/mcar3.png');
+    }
+    .car4 {
+        background-image: url('image/mcar5.png');
+    }
+    .car5 {
+        background-image: url('image/mcar4.png');
+    }
+    .car6 {
+        background-image: url('image/mcar6.png');
+    }
+    .model_block {
+        width: 84%;
+        height: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        margin-top: 20px;
+    }
+    .model_car {
+        width: 100%;
+        height: 40%;
+        display: flex;
+    }
+    .model_car ul.nav li {
+        height: 50% !important;
+    }
+    .sixcar {
+        width: 90%;
+        height: 90%;
+        background-size: cover;
+        background-position: center;
+    }
+    .display_left {
+        width: 100%;
+    }
+    .display_right {
+        width: 100%;
+        position: relative;
+    }
+    .display_right p {
+        padding: 10px;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+    .but {
+        min-width: 9vw;
+        padding: 8px 0px;
+        letter-spacing: 5px;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 2px;
+        position: absolute;
+        left: 40%;
+    }
+    .text {
+        width: 100%;
+        height: 40%;
+        position: absolute;
+        top: 25%;
+        text-align: center;
+    }
+    .pic_section {
+        width: 100%;
+        height: 60vw;
+    }
+    .box {
+        width: 50%;
+        height: 50%;
+    }
+    .news_bag {
+        width: 100%;
+        height: 220vw;
+        background-color: #F1F1F1;
+    }
+    .news_container {
+        width: 80%;
+        height: 100%;
+    }
+    .news_title {
+        width: 100%;
+        height: 13%;
+        position: relative;
+    }
+    .news_block {
+        width: 100%;
+        height: 28%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .news_title h1 {
+        font-size: 18px;
+        letter-spacing: 3px;
+        position: absolute;
+        top: 73%;
+    }
+    .news_box {
+        width: 100%;
+        height: 100%;
+    }
+    .news_text p {
+        font-size: 13px;
+    }
+    .btn {
+        position: absolute;
+        right: 0%;
+        bottom: 13%;
+    }
+    .crv-container {
+        height: 115vw;
+    }
+    .CRV_section {
+        width: 100%;
+        height: 60vw;
+    }
+    .CRV_text {
+        width: 50%;
+        height: 40%;
+        position: absolute;
+        right: 10%;
+        top: 13%;
+    }
+    .CRV_car {
+        width: 75%;
+        height: 55%;
+        position: absolute;
+        left: -30%;
+        bottom: 0%;
+    }
+    .CRV_youtube {
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        right: 10%;
+        bottom: -90%;
+    }
+    .CRV_text1 {
+        font-size: 28px;
+        position: absolute;
+        top: 15%;
+        right: -60%;
+    }
+    .CRV_text2 {
+        font-size: 20px;
+        position: absolute;
+        top: 43%;
+        right: -70%;
+    }
+    .CRV_text3 {
+        font-size: 18px;
+        position: absolute;
+        top: 65%;
+        right: -80%;
+    }
+    .media-container {
+        width: 100%;
+        height: 330vw;
+    }
+    .media_section {
+        width: 80%;
+        height: 200vw;
+    }
+    .media_title {
+        width: 100%;
+        height: 10%;
+        position: relative;
+    }
+    .media_title h1 {
+        font-size: 20px;
+        letter-spacing: 3px;
+        position: absolute;
+        bottom: 15%;
+    }
+    .media_block {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .media_box {
+        width: 100%;
+        height: 50%;
+        margin-bottom: 10%;
+    }
+    .media_pic {
+        width: 100%;
+        height: 50%;
+        background-size: cover;
+    }
+    .media_text {
+        width: 100%;
+        min-height: 50%;
+        padding: 5%;
+        position: relative;
+    }
+    .media_smalltitle {
+        font-size: 20px;
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+    }
+    .media_text_p {
+        font-size: 16px;
+        letter-spacing: 5px;
+        line-height: 30px;
+    }
+    .media_icon {
+        width: 15%;
+        height: 18%;
+        right: 0%;
+        bottom: 5%;
+    }
+    .service-container {
+        height: 215vw;
+    }
+    .sevice {
+        width: 100%;
+        height: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sevice_title {
+        width: 100%;
+        height: 13%;
+        background-color: #F2F2F2;
+        color: #4C4C4C;
+        position: relative;
+    }
+    .sevice_title h1 {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+    .sevice_box1 {
+        width: 100%;
+        height: 65%;
+    }
+    .sevice_box2 {
+        width: 100%;
+        height: 70%;
+        position: relative;
+    }
+    .sevice_block {
+        width: 100%;
+        height: 66.666%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sevice_box1 {
+        background-image: url('image/service_box1.jpg');
+        background-size: cover;
+    }
+    .sevice_box2 {
+        background-image: url('image/service_box2.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .email_box {
+        width: 70%;
+        height: 0%;
+        padding: 3.5%;
+        left: 13%;
+        top: 16%;
+    }
+    .email_box p {
+        padding: 10px 3px;
+        color: white;
+        font-size: 15px;
+        letter-spacing: 3px;
+        position: absolute;
+        top: 8%;
+    }
+    .input {
+        width: 55%;
+        height: 50%;
+        position: absolute;
+        top: 25%;
+        left: 28%;
+    }
+    .button {
+        min-width: 12%;
+        padding: 1% 0%;
+        position: absolute;
+        top: 23%;
+        right: 3%;
+        letter-spacing: 2px;
+        border-radius: 3px;
+        font-size: 13px
+    }
+    main {
+        font-size: 5em;
+    }
+    .footer-list-top {
+        width: 100%;
+    }
+    .footer-list-header {
+        font-size: 1.5em;
+    }
+    .footer-list-anchor {
+        font-size: 1.2em;
+    }
+    .footer-social-section {
+        justify-content: center;
+    }
+    .footer-social-section::after {
+        top: 25%;
+    }
+    .footer-social-connect {
+        margin-bottom: 10px;
+        padding: 0 10px;
+    }
+    .footer-social-overlap {
+        display: flex;
+        justify-content: center;
+    }
+    .footer-social-icons-wrapper {
+        width: 100%;
+        padding: 0;
+    }
+    .footer-social-overlap>a:not(:first-child) {
+        margin-left: 20px;
+    }
+    .footer-bottom-section {
+        padding: 0 5px 10px 5px;
+    }
+    .footer-bottom-wrapper {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and ( max-width:460px) {
+
+    .navbar-brand img {
+        width: 70%;
+        height: 50px;
+    }
+    .but{
+        width: 12vw;
+        padding: 8px 0px;
+        letter-spacing:5px;
+        text-align: center;
+        font-size: 10px;
+        position: absolute;
+        left:35%;
+       
+    }
+    .display_right p{
+        padding:10px;
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+
+    .news_title h1 {
+        font-size: 18px;
+        letter-spacing: 3px;
+        position: absolute;
+        top: 73%;
+    }
+    .news_text1{
+        padding-top:8px;     
+     }
+     .news_text2{
+         padding-top: 15px;
+     }
+ 
+    .news_text p {
+        font-size: 13px;
+    }
+    .btn {
+        position: absolute;
+        right: 0%;
+        bottom: 13%;
+    }
+    .CRV_text1 {
+        font-size: 20px;
+        position: absolute;
+        top: 12%;
+        right: -60%;
+    }
+    .CRV_text2 {
+        font-size: 15px;
+        position: absolute;
+        top: 45%;
+        right: -70%;
+    }
+    .CRV_text3 {
+        font-size: 14px;
+        position: absolute;
+        top: 70%;
+        right: -82%;
+    }
+    
+}
