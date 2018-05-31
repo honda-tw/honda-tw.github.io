@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>HONDA用心只做更好</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.min.js"></script>
+	</head>
+	<style>
+		.navbar-brand img {
+        height: 70px;
+    }
+
+    ul.navbar-nav li {
+        min-width: 110px;
+
+    }
+
+    .dropdown-menu {
+        background-color: #f8f9fa;
+        border-radius: 0;
+    }
+
+    .dropdown-menu .show {
+        transition: all 0.3s ease-out;
+        transition-duration: 0.3s;
+    }
+
+
+    .navbar {
+        box-shadow: 0px -3px 10px 3px #000000,
+        0px -3px 13px 2px #000000;
+    }
+
+    @media screen and (max-width:768px) {
+
+        .nav-w {
+            width: 100%;
+            text-align: center;
+        }
+        .dropdown-item {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 568px) {
+            .dropdown-menu {
+                background-color: #373737;
+                border-radius: 0;
+                border: 0;
+            }
+            .dropdown-item {
+                color: #f8f9fa;
+                padding: 10px;
+            }
+            .dropdown-divider {
+                display: none;
+            }
+        }
+
+	}
+
+.footerclass {
+  font: 13px "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.generic-anchor {
+  color: #9b9b9b;
+}
+.generic-anchor:visited {
+  color: #9b9b9b;
+}
+.generic-anchor:hover {
+  color: #E44949;
+}
+
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+main {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 10em "Oswald", sans-serif;
+  color: #9b9b9b;
+  line-height: 1;
+}
+
+footer {
+  background: #373737;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer-list-top {
+  width: 25%;
+}
+
+.footer-list-top > li {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.footer-list-header {
+  padding: 10px 0 5px 0;
+  color: #fff;
+  font: 18px "Oswald", sans-serif;
+}
+
+.footer-list-anchor {
+  font: 1.3em "Open Sans", sans-serif;
+}
+
+.footer-social-section {
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 5px;
+}
+
+.footer-social-section::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  border-top: 1px solid #ccc;
+  width: calc(100% - 20px);
+}
+
+.footer-social-overlap {
+  position: relative;
+  z-index: 2;
+  background: #373737;
+  padding: 0 20px;
+}
+
+.footer-social-connect {
+  display: flex;
+  align-items: center;
+  font: 3.5em "Oswald", sans-serif;
+  color: #fff;
+}
+
+.footer-social-small {
+  font-size: 0.6em;
+  padding: 0px 20px;
+}
+
+.footer-social-overlap > a {
+  font-size: 3em;
+}
+
+.footer-social-overlap > a:not(:first-child) {
+  margin-left: 0.38em;
+}
+
+.footer-bottom-section {
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.footer-bottom-section > div:first-child {
+  margin-right: auto;
+}
+
+.footer-bottom-wrapper {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.footer-address {
+  display: inline;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-list-header {
+    font-size: 18px;
+  }
+
+  .footer-list-anchor {
+    font-size: 1.1em;
+  }
+
+  .footer-social-connect {
+    font-size: 2.5em;
+  }
+
+  .footer-social-overlap > a {
+    font-size: 2.24em;
+  }
+
+  .footer-bottom-wrapper {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (max-width: 568px) {
+  main {
+    font-size: 5em;
+  }
+
+  .footer-list-top {
+    width: 100%;
+  }
+
+  .footer-list-header {
+    font-size: 1.8em;
+  }
+
+  .footer-list-anchor {
+    font-size: 1.2em;
+  }
+
+  .footer-social-section {
+    justify-content: center;
+  }
+
+  .footer-social-section::after {
+    top: 25%;
+  }
+
+  .footer-social-connect {
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+
+  .footer-social-overlap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-social-icons-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  .footer-bottom-section {
+    padding: 0 5px 10px 5px;
+  }
+
+  .footer-bottom-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer-social-overlap > a {
+    margin: auto;
+  }
+
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 0;
+  }
+
+  .footer-bottom-rights {
+    display: block;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    font-size: 2.2em;
+  }
+
+  .footer-list-anchor {
+    font-size: 1.2em;
+  }
+
+  .footer-social-connect {
+    font-size: 2.4em;
+  }
+
+  .footer-social-overlap > a {
+    font-size: 2.24em;
+  }
+
+  .footer-bottom-wrapper {
+    font-size: 1.3em;
+  }
+}
+	</style>
+	<body>
+			<nav class="navbar navbar-expand-md navbar-light bg-light">
+					<div class="container">
+						<a class="navbar-brand d-xl-none" href="#">
+							<img class="logo" src="logo.png" alt="">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+			
+						<div class="collapse navbar-collapse  " id="navbarSupportedContent">
+							<ul class="navbar-nav w-100 justify-content-around align-items-center">
+								<a class="navbar-brand d-none d-xl-block " href="#">
+									<img src="/img/logo.png" alt="">
+								</a>
+								<li class="nav-item dropdown nav-w">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										關於HONDA
+									</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<a class="dropdown-item" href="#">企業願景</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">生產中心</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">The Power of Dreams</a>
+			
+									</div>
+								</li>
+								<li class="nav-item dropdown nav-w">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										車系介紹
+									</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<div id="laba">       
+										<a class="dropdown-item" href="#laba1">FIT</a>
+									</div>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#laba2">HR-V</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#laba3">CR-V</a>
+			
+									</div>
+								</li>
+								<li class="nav-item dropdown nav-w">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										生活專區
+									</a>
+									<div class="dropdown-menu nav-w" aria-labelledby="navbarDropdown">
+										<a class="dropdown-item" href="#">車主服務</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">賀卡專區</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">安全知識</a>
+										<div class="dropdown-divider line-red"</div>
+										</div>
+								</li>
+								<li class="nav-item dropdown nav-w">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										據點查詢
+									</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<a class="dropdown-item" href="#">北部</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">中部</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">南部</a>
+			
+									</div>
+								</li>
+							</ul>
+							</div>
+						</div>
+				</nav>
+
+		<div class="container">
+			<header class="codrops-header">
+				
+				<h1>HONDA <span>車系介紹</span></h1>
+			</header>
+		<div id="laba1">
+			<div class="description">
+				<p>FIT</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="400px" height="100px" class="polaroid" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1000 300">
+					<g transform="rotate(-9.424738883972168 131.13208007812517,131.28302001953134) "><rect id="svg_6" height="194.264154" width="194.264154" y="34.15094" x="34"/><rect id="svg_7" height="116.226417" width="152.754719" y="56.566035" x="54.754717"/></g><rect id="svg_2" height="0" width="1" y="108" x="123" stroke-width="10" stroke="#000000" fill="#ffffff"/><g id="svg_10" transform="rotate(8.810273170471191 211.13208007812494,164.28302001953114) "><rect id="svg_11" height="194.264154" width="194.264154" y="67.15094" x="114"/><rect id="svg_12" height="116.226417" width="152.754719" y="89.566035" x="134.754717"/></g><g id="svg_13" transform="rotate(-14.838730812072754 350.132080078125,168.28302001953125) "><rect id="svg_14" height="194.264154" width="194.264154" y="71.15094" x="253"/><rect id="svg_15" height="116.226417" width="152.754719" y="93.566035" x="273.754717"/></g><g id="svg_16" transform="rotate(-1.4553210735321045 476.1320800781219,121.28302001953003) "><rect id="svg_17" height="194.264154" width="194.264154" y="24.15094" x="379"/><rect id="svg_18" height="116.226417" width="152.754719" y="46.566035" x="399.754717"/></g><g id="svg_19" transform="rotate(-4.776742458343506 556.1320800781244,176.28302001953122) "><rect id="svg_20" height="194.264154" width="194.264154" y="79.15094" x="459"/><rect id="svg_21" height="116.226417" width="152.754719" y="101.566035" x="479.754717"/></g><g id="svg_22" transform="rotate(17.17530059814453 690.1320800781251,163.2830200195312) "><rect id="svg_23" height="194.264154" width="194.264154" y="66.15094" x="593"/><rect id="svg_24" height="116.226417" width="152.754719" y="88.566035" x="613.754717"/></g><g id="svg_25" transform="rotate(-9.506031036376953 771.132080078125,177.28302001953094) "><rect id="svg_26" height="194.264154" width="194.264154" y="80.15094" x="674"/><rect id="svg_27" height="116.226417" width="152.754719" y="102.566035" x="694.754717"/></g><g id="svg_28" transform="rotate(19.351133346557617 862.1320800781251,137.28302001953148) "><rect id="svg_29" height="194.264154" width="194.264154" y="40.15094" x="765"/><rect id="svg_30" height="116.226417" width="152.754719" y="62.566035" x="785.754717"/></g></g>
+				</svg>
+				<p><strong>小型房車輕型篇</strong></p>
+				<P>單身貴族理想型</P>
+			</div>
+			<section id="photostack-1" class="photostack photostack-start">
+				<div>
+					<figure>
+						<a href="https://www.youtube.com/embed/y7UfKWgW6SQ?&autoplay=1&rel=0" class="photostack-img"><img src="img/fit-g.jpg" alt="img01"/></a>
+						<figcaption>
+							<h2 class="photostack-title">動感橘</h2>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/FIT-in.jpg" alt="img02"/></a>
+						<figcaption>
+							<h2 class="photostack-title">皓月銀</h2>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/FIT-hwa.jpg" alt="img03"/></a>
+						<figcaption>
+							<h2 class="photostack-title">深鈦灰</h2>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/FIT-b.jpg" alt="img04"/></a>
+						<figcaption>
+							<h2 class="photostack-title">律動藍</h2>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/5.jpg" alt="img05"/></a>
+						<figcaption>
+							<h2 class="photostack-title">happy day</h2>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/6.jpg" alt="img06"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Forever this</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/7.jpg" alt="img07"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Lovely Green</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/8.jpg" alt="img08"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Wonderful</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/9.jpg" alt="img09"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Love Addict</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/10.jpg" alt="img10"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Friendship</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/11.jpg" alt="img11"/></a>
+						<figcaption>
+							<h2 class="photostack-title">White Nights</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/12.jpg" alt="img12"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Serendipity</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/13.jpg" alt="img13"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Pure Soul</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/14.jpg" alt="img14"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Winds of Peace</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/15.jpg" alt="img15"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Shades of blue</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/16.jpg" alt="img16"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Lightness</h2>
+						</figcaption>
+					</figure>
+				</div>	
+			</section>
+		</div>	 
+		<div id="laba2">
+			<section class="description">
+				<p>HR-V</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="110px" height="110px" class="polaroid" preserveAspectRatio="xMidYMid meet" viewBox="0 0 300 300">
+					<!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+					<rect id="svg_2" height="0" width="1" y="108" x="123"/>
+					<rect id="svg_6" height="194.264154" width="194.264154" y="22.15094" x="18"/>
+					<rect id="svg_7" height="116.226417" width="152.754719" y="44.566035" x="38.754717"/>
+					<rect id="svg_1" height="194.264154" width="194.264154" y="83.584903" x="87.73585"/>
+					<rect id="svg_3" height="116.226417" width="152.754719" y="105.999998" x="108.490567"/>
+				</svg>
+				<p><strong>家庭房車舒適篇</strong></p>
+				<p>關心只為更好</p>
+			</section>
+			<section id="photostack-2" class="photostack photostack-start">
+				<div>
+					<figure>
+						<a href="https://www.youtube.com/watch?v=6LvzboVG8V0" class="photostack-img"><img src="img/hrv-block.jpg" alt="img04"/></a>
+						<figcaption>
+							<h2 class="photostack-title">水晶黑</h2>
+							<div class="photostack-back">
+								<p>to be or na to be.</p>
+							</div>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/hrv-woa.jpg" alt="img05"/></a>
+						<figcaption>
+							<h2 class="photostack-title">深鈦灰</h2>
+						</figcaption>
+					</figure>
+					<figure data-shuffle-iteration="2">
+						<a href="" class="photostack-img"><img src="img/hrv-bai.jpg" alt="img01"/></a>
+						<figcaption>
+							<h2 class="photostack-title">雲朵白</h2>
+							<div class="photostack-back">
+								<p>白白的雲朵.</p>
+							</div>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/hrv-boolw.jpg" alt="img02"/></a>
+						<figcaption>
+							<h2 class="photostack-title">閃蝶藍</h2>
+							<div class="photostack-back">
+								<p>to be or na to be.</p>
+							</div>
+						</figcaption>
+					</figure>
+					<figure data-shuffle-iteration="3">
+						<a href="" class="photostack-img"><img src="img/3.jpg" alt="img03"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Beautywood</h2>
+						</figcaption>
+					</figure>
+					<figure data-shuffle-iteration="2">
+						<a href="" class="photostack-img"><img src="img/6.jpg" alt="img06"/></a>
+						<figcaption>
+							<h2 class="photostack-title">陽光少年</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/7.jpg" alt="img07"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Lovely Green</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/8.jpg" alt="img08"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Wonderful</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/9.jpg" alt="img09"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Love Addict</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/10.jpg" alt="img10"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Friendship</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/11.jpg" alt="img11"/></a>
+						<figcaption>
+							<h2 class="photostack-title">White Nights</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/12.jpg" alt="img12"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Serendipity</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/13.jpg" alt="img13"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Pure Soul</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/14.jpg" alt="img14"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Winds of Peace</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/15.jpg" alt="img15"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Shades of blue</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/16.jpg" alt="img16"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Lightness</h2>
+						</figcaption>
+					</figure>
+				</div>
+			</section>
+		</div>
+		<div id="laba3">
+			<section class="description">	
+				<p> <strong>CR-V</strong> </p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="400px" height="100px" class="polaroid" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1000 300">
+					<g transform="rotate(-9.424738883972168 131.13208007812517,131.28302001953134) "><rect id="svg_6" height="194.264154" width="194.264154" y="34.15094" x="34"/><rect id="svg_7" height="116.226417" width="152.754719" y="56.566035" x="54.754717"/></g><rect id="svg_2" height="0" width="1" y="108" x="123" stroke-width="10" stroke="#000000" fill="#ffffff"/><g id="svg_10" transform="rotate(8.810273170471191 211.13208007812494,164.28302001953114) "><rect id="svg_11" height="194.264154" width="194.264154" y="67.15094" x="114"/><rect id="svg_12" height="116.226417" width="152.754719" y="89.566035" x="134.754717"/></g><g id="svg_13" transform="rotate(-14.838730812072754 350.132080078125,168.28302001953125) "><rect id="svg_14" height="194.264154" width="194.264154" y="71.15094" x="253"/><rect id="svg_15" height="116.226417" width="152.754719" y="93.566035" x="273.754717"/></g><g id="svg_16" transform="rotate(-1.4553210735321045 476.1320800781219,121.28302001953003) "><rect id="svg_17" height="194.264154" width="194.264154" y="24.15094" x="379"/><rect id="svg_18" height="116.226417" width="152.754719" y="46.566035" x="399.754717"/></g><g id="svg_19" transform="rotate(-4.776742458343506 556.1320800781244,176.28302001953122) "><rect id="svg_20" height="194.264154" width="194.264154" y="79.15094" x="459"/><rect id="svg_21" height="116.226417" width="152.754719" y="101.566035" x="479.754717"/></g><g id="svg_22" transform="rotate(17.17530059814453 690.1320800781251,163.2830200195312) "><rect id="svg_23" height="194.264154" width="194.264154" y="66.15094" x="593"/><rect id="svg_24" height="116.226417" width="152.754719" y="88.566035" x="613.754717"/></g><g id="svg_25" transform="rotate(-9.506031036376953 771.132080078125,177.28302001953094) "><rect id="svg_26" height="194.264154" width="194.264154" y="80.15094" x="674"/><rect id="svg_27" height="116.226417" width="152.754719" y="102.566035" x="694.754717"/></g><g id="svg_28" transform="rotate(19.351133346557617 862.1320800781251,137.28302001953148) "><rect id="svg_29" height="194.264154" width="194.264154" y="40.15094" x="765"/><rect id="svg_30" height="116.226417" width="152.754719" y="62.566035" x="785.754717"/></g></g>
+				</svg>
+				<p><strong>家庭房車溫馨篇</strong></p>
+				<p>用心只做更好</p>
+			</section>
+			<section id="photostack-3" class="photostack photostack-start">
+				<div>
+					<figure>
+						<a href="https://www.youtube.com/watch?v=xWYxnzEXw2Y&t=3s" class="photostack-img"><img src="img/crv-lio.jpg" alt="img05"/></a>
+						<figcaption>
+							<h2 class="photostack-title">蒼勁綠</h2>
+							<div class="photostack-back">
+								<p>不要看你會怕</p>
+							</div>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/crv-bai.jpg" alt="img02"/></a>
+						<figcaption>
+							<h2 class="photostack-title">雲朵白</h2>
+							<div class="photostack-back">
+								<p>白的嚇死人</p>
+							</div>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/crv-block.jpg" alt="img03"/></a>
+						<figcaption>
+							<h2 class="photostack-title">水晶黑</h2>
+							<div class="photostack-back">
+								<p>上班不要看</p>
+							</div>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/crv-hwa.jpg" alt="img01"/></a>
+						<figcaption>
+							<h2 class="photostack-title">深鈦灰</h2>
+							<div class="photostack-back">
+								<p>123</p>
+							</div>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/4.jpg" alt="img04"/></a>
+						<figcaption>
+							<h2 class="photostack-title">阿里山茶葉</h2>
+							<div class="photostack-back">
+								<p>the tea</p>
+							</div>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/6.jpg" alt="img06"/></a>
+						<figcaption>
+							<h2 class="photostack-title">陽光男孩</h2>
+							<div class="photostack-back">
+								<p>Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Baby if you've ever wondered - wondered whatever became of me. </p>
+							</div>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/7.jpg" alt="img07"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Lovely Green</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/8.jpg" alt="img08"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Wonderful</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/9.jpg" alt="img09"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Love Addict</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/10.jpg" alt="img10"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Friendship</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/11.jpg" alt="img11"/></a>
+						<figcaption>
+							<h2 class="photostack-title">White Nights</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/12.jpg" alt="img12"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Serendipity</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/13.jpg" alt="img13"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Pure Soul</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/14.jpg" alt="img14"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Winds of Peace</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/15.jpg" alt="img15"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Shades of blue</h2>
+						</figcaption>
+					</figure>
+					<figure data-dummy>
+						<a href="#" class="photostack-img"><img src="img/16.jpg" alt="img16"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Lightness</h2>
+						</figcaption>
+					</figure>
+				</div>
+			</section>
+		</div>	
+		</div><!-- /container -->
+		<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                       crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+              crossorigin="anonymous"></script>
+	      	<script src="js/classie.js"></script>
+	      	<script src="js/photostack.js"></script>
+	      	<script>
+			// [].slice.call( document.querySelectorAll( '.photostack' ) ).forEach( function( el ) { new Photostack( el ); } );
+			
+			new Photostack( document.getElementById( 'photostack-1' ), {
+				callback : function( item ) {
+					//console.log(item)
+				}
+			} );
+			new Photostack( document.getElementById( 'photostack-2' ), {
+				callback : function( item ) {
+					//console.log(item)
+				}
+			} );
+			new Photostack( document.getElementById( 'photostack-3' ), {
+				callback : function( item ) {
+					//console.log(item)
+				}
+			} );
+		</script>
+			<main>
+				Content
+			  </main>
+			<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
+			<footer class="flex-rw footerclass">
+			  
+			  <ul class="footer-list-top">
+				<li>
+				  <h4 class="footer-list-header">最新消息</h4></li>
+				<li><a href='/shop/about-mission' class="generic-anchor footer-list-anchor" itemprop="significantLink">購車優惠</a></li>
+				<li><a href='/promos.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">品牌活動</a></li>
+				<li><a href='/retailers/new-retailers.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">新聞中心</a></li>
+			
+				<li><a href='/job-openings.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">展示據點</a></li>
+			
+			  </ul>
+			  <ul class="footer-list-top">
+				<li>
+				  <h4 class="footer-list-header">車款介紹</h4></li>
+				<li><a href='/Angels/cat/id/70' class="generic-anchor footer-list-anchor">全車車系</a></li>
+				<li><a href='/Home-Decor/cat/id/64' class="generic-anchor footer-list-anchor">購車專區</a></li>
+				<li><a href='/Mugs/cat/id/32' class="generic-anchor footer-list-anchor">預約試乘</a></li>
+				<li><a href='/Pet-Lover/cat/id/108' class="generic-anchor footer-list-anchor">原廠保證</a></li>
+			  </ul>
+			  <ul class="footer-list-top">
+				<li id='help'>
+				  <h4 class="footer-list-header">車主專區</h4></li>
+				<li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">愛車資訊</a></li>
+				<li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">愛車服務</a></li>
+				<li id='find-a-store'><a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">服務據點</a></li>
+				<li id='user-registration'><a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">預約保修</a></li>
+			  </ul>
+			  <ul class="footer-list-top">
+				<li id='help'>
+				  <h4 class="footer-list-header">購車專區</h4></li>
+				<li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">預約試乘</a></li>
+				<li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">展示據點</a></li>
+				<li id='find-a-store'><a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">推薦業代</a></li>
+				<li id='user-registration'><a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">購車試算</a></li>
+			  
+			  </ul>
+			  <section class="footer-social-section flex-rw">
+				  <span class="footer-social-overlap footer-social-connect">
+				  CONNECT <span class="footer-social-small">with</span> US
+				  </span>
+				  <span class="footer-social-overlap footer-social-icons-wrapper">
+				  <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
+				  <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+				  <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+				  <a href="https://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+				  <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+				  <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+				  </span>
+			  </section>
+			  <section class="footer-bottom-section flex-rw">
+			<div class="footer-bottom-wrapper">   
+			<i class="fa fa-copyright" role="copyright">
+			 
+			</i> 2018 Honda in <address class="footer-address" role="company address">Taiwan, TW</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
+				</div>
+				<div class="footer-bottom-wrapper">
+				<a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+				  </div>
+			  </section>
+			</footer>	
+	</body>
+</html>
