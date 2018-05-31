@@ -21,50 +21,13 @@
 			box-sizing: border-box;
 		}
 
-
-
-		@media only screen and (max-width: 568px) {
-
-			.dropdown-menu {
-				background-color: #373737;
-				border-radius: 0;
-				border: 0;
-			}
-			.dropdown-item {
-				color: #f8f9fa;
-				padding: 10px;
-			}
-			.dropdown-divider {
-				display: none;
-			}
-		}
-
-
-
-
-		@media screen and (max-width:768px) {
-
-			.nav-w {
-				width: 100%;
-				text-align: center;
-			}
-			.dropdown-item {
-				text-align: center;
-			}
-
-			.logo {
-				width: 90%;
-				height: 0px;
-			}
-		}
-
 		@media(max-width: 767px) {
 			.menuIcon {
 				cursor: pointer;
 				display: block;
 				position: absolute;
 				right: 15px;
-				top: 15px;
+				top: 8px;
 				height: 30px;
 				width: 35px;
 				z-index: 12;
@@ -233,24 +196,77 @@
 		}
 
 		.overlay-menu {
-			background: lightblue;
+			background: #3a3a3a;
 			color: black;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			position: absolute;
-			top: 99px;
+			top: 69px;
 			right: 0;
 			padding-right: 15px;
 			transform: translateX(-100%);
 			width: 100vw;
-			height: 56.25vw;
+
+			height: calc(100vh - 69px);
 			-webkit-transition: transform 0.2s ease-out;
 			transition: transform 0.2s ease-out;
 			z-index: 999;
 			font-size: 15px;
 			text-align: center;
+		}
 
+
+		.navbar-brand {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.navbar .card {
+			border: none;
+			background: none;
+		}
+
+		button {
+			padding: 0;
+		}
+
+		.navbar .card-header {
+			font-size: 27px;
+			padding-left: 0;
+			padding-right: 0;
+			padding-bottom: 10px;
+			padding-top: 20px;
+			margin-bottom: 0;
+			border: none;
+			background-color: rgba(0, 0, 0, 0);
+		}
+
+		.navbar .card-header h5 {
+			display: flex;
+			justify-content: flex-end;
+
+		}
+
+		.navbar .card-body {
+			padding: 0;
+			display: flex;
+			justify-content: flex-end;
+			color: #f8f9fa;
+		}
+
+		.navbar .btn {
+			font-size: 27px;
+			border: none;
+			padding: 0;
+		}
+
+		.navbar .btn-link {
+			color: #fff;
+		}
+
+		#collapseOne a {
+			font-size: 15px;
 		}
 
 		.overlay-menu ul,
@@ -263,7 +279,7 @@
 
 		.overlay-menu li a {
 			display: block;
-			color: #353333;
+			color: #FFf;
 			font-size: 1.8em;
 			letter-spacing: 4px;
 			/*   opacity: 0; */
@@ -282,14 +298,21 @@
 			-webkit-transition: color 0.3s ease;
 			transition: color 0.3s ease;
 		}
+
+		@media screen and ( max-width: 768px) {
+			.navbar-brand img {
+				width: 50%;
+				height: 53px;
+			}
+		}
 	</style>
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-md navbar-light bg-light">
 		<div class="container">
-			<a class="navbar-brand d-xl-none" href="#">
-				<img class="logo" src="logo.png" alt="">
+			<a class="navbar-brand d-xl-none" href="/index.html">
+				<img class="logo" src="image/logo.png" alt="">
 			</a>
 			<div class="menuIcon">
 				<span class="icon icon-bars"></span>
@@ -298,16 +321,31 @@
 			<div class="overlay-menu">
 				<ul id="menu">
 					<li>
-						<a href="#home">Home</a>
+						<div id="accordion">
+							<div class="card">
+								<div class="card-header" id="headingOne">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											HOME
+										</button>
+									</h5>
+								</div>
+								<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+									<a class="card-body" href="/honda-about/about1.html">VHS.</a>
+									<a class="card-body" href="/honda-about/about2.html">VHS.</a>
+									<a class="card-body" href="/honda-about/about3.html">VHS.</a>
+								</div>
+							</div>
+						</div>
 					</li>
 					<li>
-						<a href="#services">Abot</a>
+						<a href="/cars/cars.html">Abot</a>
 					</li>
 					<li>
-						<a href="#about">Vehicles</a>
+						<a href="/honda-life/honda-life.html">Vehicles</a>
 					</li>
 					<li>
-						<a href="#contact">Contact</a>
+						<a href="#footer_Start">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -315,7 +353,7 @@
 			<div class="collapse navbar-collapse  " id="navbarSupportedContent">
 				<ul class="navbar-nav w-100 justify-content-around align-items-center">
 					<a class="navbar-brand d-none d-xl-block " href="#">
-						<img src="logo.png" alt="">
+						<img src="image/logo.png" alt="">
 					</a>
 					<li class="nav-item dropdown nav-w">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -323,11 +361,11 @@
 							關於HONDA
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">品牌故事</a>
+							<a class="dropdown-item" href="/honda-about/about1.html">品牌故事</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">新聞中心</a>
+							<a class="dropdown-item" href="/honda-about/about2.html">新聞中心</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Honda徵才</a>
+							<a class="dropdown-item" href="/honda-about/about3.html">Honda徵才</a>
 
 						</div>
 					</li>
@@ -337,11 +375,11 @@
 							車系介紹
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">BR-V</a>
+							<a class="dropdown-item" href="/cars/cars.html">BR-V</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">CR-V</a>
+							<a class="dropdown-item" href="/cars/cars.html">CR-V</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">CITY</a>
+							<a class="dropdown-item" href="/cars/cars.html">CITY</a>
 
 						</div>
 					</li>
@@ -351,54 +389,61 @@
 							生活專區
 						</a>
 						<div class="dropdown-menu nav-w" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">車主服務</a>
+							<a class="dropdown-item" href="/honda-life/honda-life.html">車主服務</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">賀卡專區</a>
+							<a class="dropdown-item" href="/honda-life/honda-life.html">賀卡專區</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">安全知識</a>
-							<div class="dropdown-divider line-red" </div>
-							</div>
+							<a class="dropdown-item" href="/honda-life/honda-life.html">安全知識</a>
+							<div class="dropdown-divider line-red"></div>
+						</div>
+
 					</li>
 					<li class="nav-item dropdown nav-w">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 						 aria-expanded="false">
-							據點查詢
+							聯絡我們
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">北部</a>
+							<a class="dropdown-item" href="#footer_Start">北部</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">中部</a>
+							<a class="dropdown-item" href="#footer_Start">中部</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">南部</a>
+							<a class="dropdown-item" href="#footer_Start">南部</a>
 
 						</div>
 					</li>
 				</ul>
-				</div>
 			</div>
+		</div>
 	</nav>
 
 
 	<div class="bg">
 		<!-- Swiper -->
-		 <div class="headpic swiper-container2">
+		<div id="head-swiper-container" class="headpic swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide ">
-					<img class="a1" src="image/a1.jpg" alt="">
+					<img class="a1" src="image/a-1.jpg" alt="">
 				</div>
 				<div class="swiper-slide ">
-					<img class="a1" src="image/a2.jpg" alt="">
+					<img class="a1" src="image/a-2.jpg" alt="">
 				</div>
-				<div class="swiper-slide a3">
-					<img class="a1" src="image/a3.jpg" alt="">
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a-3.jpg" alt="">
 				</div>
-				<div class="swiper-slide a4">
-					<img class="a1" src="image/a4.jpg" alt="">
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a-4.jpg" alt="">
+				</div>
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a-5.jpg" alt="">
+				</div>
+				<div class="swiper-slide ">
+					<img class="a1" src="image/a-6.jpg" alt="">
 				</div>
 			</div>
 			<!-- Add Pagination -->
-			<div class="swiper-pagination2"></div>
-		</div> 
+			<div class="swiper-pagination"></div>
+		</div>
 		<video id="headvideo" class="video" src="a.mp4" autoplay loop muted></video>
 	</div>
 
@@ -421,17 +466,17 @@
 							<div class="sixcar car3"></div>
 						</a>
 					</li>
-					<li class="col-4 col-sm-2 h-100 d-inline-block">
+					<li class="col-4 order-5 col-sm-2 h-100 d-inline-block">
 						<a data-toggle="tab" href="#car4part">
 							<div class="sixcar car4"></div>
 						</a>
 					</li>
-					<li class="col-4 col-sm-2 h-100 d-inline-block">
+					<li class="col-4 order-4 col-sm-2 h-100 d-inline-block">
 						<a data-toggle="tab" href="#car5part">
 							<div class="sixcar car5"></div>
 						</a>
 					</li>
-					<li class="col-4 col-sm-2 h-100 d-inline-block">
+					<li class="col-4 order- col-sm-2 h-100 d-inline-block">
 						<a data-toggle="tab" href="#car6part">
 							<div class="sixcar car6"></div>
 						</a>
@@ -445,7 +490,7 @@
 				<div class="tab-pane h-100 fade show active" id="car1part" role="tabpanel" aria-labelledby="pills-home-tab">
 					<div class="model_display">
 						<div class="display_left">
-							<div class="swiper-container">
+							<div class="swiper-container cube">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide" style="background-image:url(image/car1-head.jpg)"></div>
 									<div class="swiper-slide" style="background-image:url(image/car1-left.jpg)"></div>
@@ -470,7 +515,7 @@
 				<div class="tab-pane h-100 fade" id="car2part" role="tabpanel" aria-labelledby="pills-profile-tab">
 					<div class="model_display">
 						<div class="display_left">
-							<div class="swiper-container">
+							<div class="swiper-container cube">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide" style="background-image:url(image/car2-head.jpg)"></div>
 									<div class="swiper-slide" style="background-image:url(image/car2-left.jpg)"></div>
@@ -495,7 +540,7 @@
 				<div class="tab-pane  h-100 fade" id="car3part" role="tabpanel" aria-labelledby="pills-contact-tab">
 					<div class="model_display">
 						<div class="display_left">
-							<div class="swiper-container">
+							<div class="swiper-container cube">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide" style="background-image:url(image/head.jpg)"></div>
 									<div class="swiper-slide" style="background-image:url(image/left.jpg)"></div>
@@ -519,7 +564,7 @@
 				<div class="tab-pane  h-100 fade" id="car4part" role="tabpanel" aria-labelledby="pills-contact-tab">
 					<div class="model_display">
 						<div class="display_left">
-							<div class="swiper-container">
+							<div class="swiper-container cube">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide" style="background-image:url(image/car4-head.jpg)"></div>
 									<div class="swiper-slide" style="background-image:url(image/car4-left.jpg)"></div>
@@ -544,7 +589,7 @@
 				<div class="tab-pane  h-100 fade" id="car5part" role="tabpanel" aria-labelledby="pills-contact-tab">
 					<div class="model_display">
 						<div class="display_left">
-							<div class="swiper-container">
+							<div class="swiper-container cube">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide" style="background-image:url(image/car5-head.jpg)"></div>
 									<div class="swiper-slide" style="background-image:url(image/car5-left.jpg)"></div>
@@ -569,7 +614,7 @@
 				<div class="tab-pane  h-100 fade" id="car6part" role="tabpanel" aria-labelledby="pills-contact-tab">
 					<div class="model_display">
 						<div class="display_left">
-							<div class="swiper-container">
+							<div class="swiper-container cube">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide" style="background-image:url(image/car6-head.jpg)"></div>
 									<div class="swiper-slide" style="background-image:url(image/car6-left.jpg)"></div>
@@ -893,7 +938,7 @@
 				//console.log('scrollTop:' + window_height);
 				//console.log(top);
 			});
-			var swiper = new Swiper('.swiper-container', {
+			var swiper = new Swiper('.cube', {
 				effect: 'cube',
 				grabCursor: true,
 				cubeEffect: {
@@ -912,7 +957,7 @@
 				var paneTarget = $(e.target).attr('href');
 				var $thePane = $('.tab-pane' + paneTarget);
 				var paneIndex = $thePane.index();
-				if ($thePane.find('.swiper-container').length > 0 && 0 === $thePane.find('.swiper-slide-active').length) {
+				if ($thePane.find('.cube').length > 0 && 0 === $thePane.find('.swiper-slide-active').length) {
 					swiper[paneIndex].update();
 				}
 				swiper[paneIndex].slideToLoop(0, 1000);
@@ -956,25 +1001,14 @@
 
 
 		</script>
-		   
-		   <script>
-			var swiper = new Swiper('.swiper-container2', {
-			  spaceBetween: 30,
-			  pagination: {
-				el: '.swiper-pagination2',
-				clickable: true,
-			  },
-			});
-		  </script>
-
-
 		<script>
-			document.getElementById('#headvideo').play();
+			var swiper2 = new Swiper('#head-swiper-container', {
+				spaceBetween: 30,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
 		</script>
-
-
-
-
 </body>
-
 </html>

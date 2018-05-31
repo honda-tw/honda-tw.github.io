@@ -36,9 +36,9 @@
     }
     .news_text1,
     .news_text2 {
-        padding-bottom: 10px
+        padding-bottom: 10px;
     }
-    .btn {
+    .news_bag .btn {
         width: 3.3vw;
         min-height: 1.5vw;
         font-size: 22px;
@@ -138,10 +138,10 @@
     .navbar-brand img {
         height: 160px;
     }
-    .navbar-nav li>a {
+    .navbar-nav li > a {
         font-size: 190%;
     }
-    .dropdown-menu>a {
+    .dropdown-menu > a {
         font-size: 160%;
     }
     .display_right p {
@@ -171,7 +171,7 @@
     .news_text2 {
         padding-bottom: 25px
     }
-    .btn {
+    .news_bag .btn {
         width: 3.5vw;
         min-height: 1.8vw;
         font-size: 25px;
@@ -310,7 +310,7 @@
         letter-spacing: 5px;
         padding-top: 2%;
     }
-    .btn {
+    .news_bag .btn {
         bottom: -50%;
         position: absolute;
         right: 2%
@@ -445,7 +445,7 @@
     .news_text p {
         font-size: 13px;
     }
-    .btn {
+    .news_bag .btn{
         padding: .18rem .3rem;
         font-size: .575rem;
         line-height: 1.5;
@@ -532,10 +532,10 @@
         background-image: url('image/mcar3.png');
     }
     .car4 {
-        background-image: url('image/mcar5.png');
+        background-image: url('image/mcar4.png');
     }
     .car5 {
-        background-image: url('image/mcar4.png');
+        background-image: url('image/mcar5.png');
     }
     .car6 {
         background-image: url('image/mcar6.png');
@@ -633,7 +633,7 @@
     .news_text p {
         font-size: 13px;
     }
-    .btn {
+    .news_bag .btn {
         padding: .3rem .4rem;
         font-size: 0.8rem;
         position: absolute;
@@ -882,7 +882,7 @@
         font-size: 18px;
         letter-spacing: 3px;
     }
-    .btn {
+    .news_bag .btn {
         padding: .3rem .4rem;
         font-size: 0.8rem;
         line-height: 1.5;
