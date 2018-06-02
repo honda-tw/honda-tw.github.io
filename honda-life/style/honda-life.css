@@ -601,7 +601,7 @@ footer {
   margin-bottom: 4vh;
 }
 
-hr {
+#bar hr {
   border: solid 1px;
 }
 
@@ -624,18 +624,15 @@ h1 {
 
 #news .news_pic {
   width: 100%;
-  border: 3px solid #fff;
-  
+  border: 3px solid #fff;  
 }
 
 [data-aos="news_gray"] {
-  /*初始值*/
-  filter:grayscale(1);
-  filter:brightness(.5)
+  /*初始值*/  
+  filter:brightness(.3)
 }
 
-[data-aos="news_gray"].aos-animate {
-  filter:grayscale(0);
+[data-aos="news_gray"].aos-animate { 
   filter:brightness(1);
 }
 
@@ -665,25 +662,44 @@ h1 {
 }
 
 /* honor */
-
 #honor.container {
   margin-right: 0;
 }
-
 #honor iframe {
   margin-bottom: calc(16px + 4vh);
   width: 85%;
   height: 35vw;
 }
-
 #honor .vidoe_img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
-
 #honor img {
   width: 85%;
+}
+#honor h2{
+  position: absolute;
+  top: 63%;
+  left: 15%;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-family: 微軟正黑體;
+}
+#honor hr{
+  position: absolute;
+  top: 65%;
+  left: 15%;
+}
+[data-aos="honor_hr"] {
+  /*初始值*/
+  width: 0;
+}
+[data-aos="honor_hr"].aos-animate {
+  width: 188px;
+  border:solid 1.5px #f00;
 }
 
 /* magazine */
