@@ -592,7 +592,7 @@ footer {
 .banner {
   width: 100%;
   margin-bottom: 7vh;
-  box-shadow: 0 5px 20px #aaa;
+  box-shadow: 0 5px 20px #aaa;  
 }
 
 /* bar */
@@ -625,6 +625,18 @@ h1 {
 #news .news_pic {
   width: 100%;
   border: 3px solid #fff;
+  
+}
+
+[data-aos="news_gray"] {
+  /*初始值*/
+  filter:grayscale(1);
+  filter:brightness(.5)
+}
+
+[data-aos="news_gray"].aos-animate {
+  filter:grayscale(0);
+  filter:brightness(1);
 }
 
 #news_picframe:before, #news_picframe:after {
