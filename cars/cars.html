@@ -356,17 +356,90 @@ main {
   line-height: 1;
 }
 
+<!-- css footer-->
+
+/* footer */
+
+.footerclass {
+  font: 13px "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.generic-anchor {
+  color: #9b9b9b;
+}
+
+.generic-anchor:visited {
+  color: #9b9b9b;
+}
+
+.generic-anchor:hover {
+  color: #E44949;
+}
+
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+main {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 10em "Oswald", sans-serif;
+  color: #9b9b9b;
+  line-height: 1;  
+}
+
 footer {
   background: #373737;
   margin-top: auto;
   width: 100%;
 }
 
+.footer_collapse a{
+    display: flex;
+    justify-content: center;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #373737;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.btn-link {
+  font-weight: 400;
+  color: #fff;
+  background-color: transparent;
+}
+.btn-link:hover {
+  color: #fff;
+  text-decoration: underline;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
 .footer-list-top {
   width: 25%;
 }
 
-.footer-list-top > li {
+.footer-list-top>li {
   text-align: center;
   padding-bottom: 10px;
 }
@@ -418,11 +491,11 @@ footer {
   padding: 0px 20px;
 }
 
-.footer-social-overlap > a {
+.footer-social-overlap>a {
   font-size: 3em;
 }
 
-.footer-social-overlap > a:not(:first-child) {
+.footer-social-overlap>a:not(:first-child) {
   margin-left: 0.38em;
 }
 
@@ -433,7 +506,7 @@ footer {
   margin-top: 10px;
 }
 
-.footer-bottom-section > div:first-child {
+.footer-bottom-section>div:first-child {
   margin-right: auto;
 }
 
@@ -451,222 +524,211 @@ footer {
   .footer-list-header {
     font-size: 18px;
   }
-
   .footer-list-anchor {
     font-size: 1.1em;
   }
-
   .footer-social-connect {
     font-size: 2.5em;
   }
-
-  .footer-social-overlap > a {
+  .footer-social-overlap>a {
     font-size: 2.24em;
   }
-
   .footer-bottom-wrapper {
     font-size: 1.3em;
   }
 }
+
 @media only screen and (max-width: 568px) {
   main {
     font-size: 5em;
   }
-
   .footer-list-top {
     width: 100%;
   }
-
   .footer-list-header {
     font-size: 1.8em;
   }
-
   .footer-list-anchor {
     font-size: 1.2em;
   }
-
   .footer-social-section {
     justify-content: center;
   }
-
   .footer-social-section::after {
     top: 25%;
   }
-
   .footer-social-connect {
     margin-bottom: 10px;
     padding: 0 10px;
   }
-
   .footer-social-overlap {
     display: flex;
     justify-content: center;
   }
-
   .footer-social-icons-wrapper {
     width: 100%;
     padding: 0;
   }
-
-  .footer-social-overlap > a:not(:first-child) {
+  .footer-social-overlap>a:not(:first-child) {
     margin-left: 20px;
   }
-
   .footer-bottom-section {
     padding: 0 5px 10px 5px;
   }
-
   .footer-bottom-wrapper {
     text-align: center;
     width: 100%;
     margin-top: 10px;
   }
 }
+
 @media only screen and (max-width: 480px) {
-  .footer-social-overlap > a {
+  .footer-social-overlap>a {
     margin: auto;
   }
-
-  .footer-social-overlap > a:not(:first-child) {
+  .footer-social-overlap>a:not(:first-child) {
     margin-left: 0;
   }
-
   .footer-bottom-rights {
     display: block;
   }
 }
+
 @media only screen and (max-width: 320px) {
   .footer-list-header {
     font-size: 2.2em;
   }
-
   .footer-list-anchor {
     font-size: 1.2em;
   }
-
   .footer-social-connect {
     font-size: 2.4em;
   }
-
-  .footer-social-overlap > a {
+  .footer-social-overlap>a {
     font-size: 2.24em;
   }
-
   .footer-bottom-wrapper {
     font-size: 1.3em;
   }
 }
+
+
+/* footer end */
+}
 	</style>
 	<body>
 
-
-		  <nav class="navbar navbar-expand-md navbar-light bg-light">
-					<div class="container">
-							<a class="navbar-brand d-xl-none" href="/index.html">
-									<img class="logo" src="img/logo.png" alt="">
-							</a>
-							<div class="menuIcon">
-									<span class="icon icon-bars"></span>
-									<span class="icon icon-bars overlay"></span>
-							</div>
-							<div class="overlay-menu">
-									<ul id="menu">
-											<li>
-													<div id="accordion">
-															<div class="card">
-																	<div class="card-header" id="headingOne">
-																			<h5 class="mb-0">
-																					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-																							HOME
-																					</button>
-																			</h5>
-																	</div>
-																	<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-																			<a class="card-body" href="/honda-about/about1.html">VHS.</a>
-																			<a class="card-body" href="/honda-about/about2.html">VHS.</a>
-																			<a class="card-body" href="/honda-about/about3.html">VHS.</a>
-																	</div>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+			<div class="container">
+					<a class="navbar-brand d-xl-none" href="../index.html">
+							<img class="logo" src="img/logo.png" alt="">
+					</a>
+					<div class="menuIcon">
+							<span class="icon icon-bars"></span>
+							<span class="icon icon-bars overlay"></span>
+					</div>
+					<div class="overlay-menu">
+							<ul id="menu">
+									<li>
+											<div id="accordion">
+													<div class="card">
+															<div class="card-header" id="headingOne">
+																	<h5 class="mb-0">
+																			<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+																					ABOUT
+																			</button>
+																	</h5>
+															</div>
+															<div id="collapseOne" class="collapse navbar_collapse" aria-labelledby="headingOne" data-parent="#accordion">
+																	<a class="card-body" href="/honda-about/about1.html">企業願景</a>
+																	<a class="card-body" href="/honda-about/about2.html">生產中心</a>
+																	<a class="card-body" href="/honda-about/about3.html">夢想動力</a>
 															</div>
 													</div>
-											</li>
-											<li>
-													<a href="/cars/cars.html">About</a>
-											</li>
-											<li>
-													<a href="/honda-life/honda-life.html">Vehicles</a>
-											</li>
-											<li>
-													<a href="#footer_Start">Contact</a>
-											</li>
-									</ul>
-							</div>
-	
-							<div class="collapse navbar-collapse  " id="navbarSupportedContent">
-									<ul class="navbar-nav w-100 justify-content-around align-items-center">
-											<a class="navbar-brand d-none d-xl-block " href="#">
-													<img src="img/logo.png" alt="">
-											</a>
-											<li class="nav-item dropdown nav-w">
-													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-															aria-expanded="false">
-															關於HONDA
-													</a>
-													<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-															<a class="dropdown-item" href="/honda-about/about1.html">品牌故事</a>
-															<div class="dropdown-divider"></div>
-															<a class="dropdown-item" href="/honda-about/about2.html">新聞中心</a>
-															<div class="dropdown-divider"></div>
-															<a class="dropdown-item" href="/honda-about/about3.html">Honda徵才</a>
-	
-													</div>
-											</li>
-											<li class="nav-item dropdown nav-w">
-													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-															aria-expanded="false">
-															車系介紹
-													</a>
-													<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-															<a class="dropdown-item" href="/cars/cars.html">BR-V</a>
-															<div class="dropdown-divider"></div>
-															<a class="dropdown-item" href="/cars/cars.html">CR-V</a>
-															<div class="dropdown-divider"></div>
-															<a class="dropdown-item" href="/cars/cars.html">CITY</a>
-	
-													</div>
-											</li>
-											<li class="nav-item dropdown nav-w">
-													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-															aria-expanded="false">
-															生活專區
-													</a>
-													<div class="dropdown-menu nav-w" aria-labelledby="navbarDropdown">
-															<a class="dropdown-item" href="/honda-life/honda-life.html">車主服務</a>
-															<div class="dropdown-divider"></div>
-															<a class="dropdown-item" href="/honda-life/honda-life.html">賀卡專區</a>
-															<div class="dropdown-divider"></div>
-															<a class="dropdown-item" href="/honda-life/honda-life.html">安全知識</a>
-															<div class="dropdown-divider line-red"></div>
-													</div>
-	
-											</li>
-											<li class="nav-item dropdown nav-w">
-													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-															aria-expanded="false">
-															聯絡我們
-													</a>
-													<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-															<a class="dropdown-item" href="#footer_Start">北部</a>
-															<div class="dropdown-divider"></div>
-															<a class="dropdown-item" href="#footer_Start">中部</a>
-															<div class="dropdown-divider"></div>
-															<a class="dropdown-item" href="#footer_Start">南部</a>
-	
-													</div>
-											</li>
-									</ul>
-							</div>
+											</div>
+									</li>
+
+									<li>
+											<a href="/honda-life/honda-life.html">Life's</a>
+									</li>
+									<li>
+											<a href="/cars/cars.html">Vehicles</a>
+									</li>
+									<li>
+											<a href="#footer_Start">Contact us</a>
+									</li>
+
+							</ul>
 					</div>
-			</nav>
+
+					<div class="collapse navbar-collapse  " id="navbarSupportedContent">
+							<ul class="navbar-nav w-100 justify-content-around align-items-center">
+									<a class="navbar-brand d-none d-xl-block " href="../index.html">
+											<img src="img/logo.png" alt="">
+									</a>
+									<li class="nav-item dropdown nav-w">
+											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+													aria-expanded="false">
+													關於HONDA
+											</a>
+											<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+													<a class="dropdown-item" href="/honda-about/about1.html">企業願景</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="/honda-about/about2.html">生產中心</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="/honda-about/about3.html">夢想動力
+													</a>
+
+											</div>
+									</li>
+									<li class="nav-item dropdown nav-w">
+											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+													aria-expanded="false">
+													車系介紹
+											</a>
+											<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+													<a class="dropdown-item" href="/cars/cars.html">FIT</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="/cars/cars.html#laba2">HR-V</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="/cars/cars.html#laba3">CR-V</a>
+
+											</div>
+									</li>
+									<li class="nav-item dropdown nav-w">
+											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+													aria-expanded="false">
+													生活專區
+											</a>
+											<div class="dropdown-menu nav-w" aria-labelledby="navbarDropdown">
+													<a class="dropdown-item" href="/honda-life/honda-life.html">最新活動</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="/honda-life/honda-life.html#honor">獲獎榮耀</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="/honda-life/honda-life.html#magazine">車主雜誌</a>
+													<div class="dropdown-divider line-red"></div>
+											</div>
+
+									</li>
+									<li class="nav-item dropdown nav-w">
+											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+													aria-expanded="false">
+													聯絡我們
+											</a>
+											<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+													<a class="dropdown-item" href="#footer_Start">北部</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#footer_Start">中部</a>
+													<div class="dropdown-divider"></div>
+													<a class="dropdown-item" href="#footer_Start">南部</a>
+
+											</div>
+									</li>
+							</ul>
+					</div>
+			</div>
+	</nav>
+
 	
 
 		<div class="container-fluid">
@@ -1065,71 +1127,194 @@ footer {
 				}
 			} );
 		</script>
-			<main>
-				Content
-			  </main>
-			<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
-			<footer class="flex-rw footerclass">
-			  
-			  <ul class="footer-list-top">
+   <main id="footer_Start">
+		Content
+</main>
+<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
+<footer class="flex-rw footerclass d-block d-md-flex">
+		<div id="accordion" class="d-md-none">
+				<div class="card ">
+						<div class="card-header " id="headingFour">
+								<h5 class="mb-0 d-flex justify-content-center">
+										<button class="btn btn-link " data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+												關於Honda
+										</button>
+								</h5>
+						</div>
+
+						<div id="collapseFour" class="collapse footer_collapse" aria-labelledby="headingFour" data-parent="#accordion">
+
+								<a class="dropdown-item" href="/honda-about/about1.html">企業願景</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/honda-about/about2.html">生產中心</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/honda-about/about3.html">夢想動力</a>
+
+						</div>
+				</div>
+				<div class="card">
+						<div class="card-header" id="headingTwo">
+								<h5 class="mb-0 d-flex justify-content-center">
+										<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+												車系介紹
+										</button>
+								</h5>
+						</div>
+						<div id="collapseTwo" class="collapse footer_collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+
+								<a class="dropdown-item" href="/cars/cars.html">FIT</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/cars/cars.html">HR-V</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/cars/cars.html">CR-V</a>
+
+
+						</div>
+				</div>
+				<div class="card">
+						<div class="card-header" id="headingThree">
+								<h5 class="mb-0  d-flex justify-content-center">
+										<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+												生活專區
+										</button>
+								</h5>
+						</div>
+						<div id="collapseThree" class="collapse footer_collapse" aria-labelledby="headingThree" data-parent="#accordion">
+
+								<a class="dropdown-item" href="/honda-life/honda-life.html">最新活動</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/honda-life/honda-life.html">獲獎榮耀</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/honda-life/honda-life.html">車主雜誌</a>
+
+
+						</div>
+				</div>
+				<div class="card">
+						<div class="card-header" id="headingFive">
+								<h5 class="mb-0  d-flex justify-content-center">
+										<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+												購車專區
+										</button>
+								</h5>
+						</div>
+						<div id="collapseFive" class="collapse footer_collapse" aria-labelledby="headingFive" data-parent="#accordion">
+
+								<a class="dropdown-item" href="/honda-life/honda-life.html">預約試乘</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/honda-life/honda-life.html">展示據點</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/honda-life/honda-life.html">推薦業代</a>
+
+
+						</div>
+				</div>
+
+		</div>
+
+
+
+		<ul class="footer-list-top d-none d-md-block">
 				<li>
-				  <h4 class="footer-list-header">最新消息</h4></li>
-				<li><a href='/shop/about-mission' class="generic-anchor footer-list-anchor" itemprop="significantLink">購車優惠</a></li>
-				<li><a href='/promos.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">品牌活動</a></li>
-				<li><a href='/retailers/new-retailers.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">新聞中心</a></li>
-			
-				<li><a href='/job-openings.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">展示據點</a></li>
-			
-			  </ul>
-			  <ul class="footer-list-top">
+						<h4 class="footer-list-header">關於Honda</h4>
+				</li>
 				<li>
-				  <h4 class="footer-list-header">車款介紹</h4></li>
-				<li><a href='/Angels/cat/id/70' class="generic-anchor footer-list-anchor">全車車系</a></li>
-				<li><a href='/Home-Decor/cat/id/64' class="generic-anchor footer-list-anchor">購車專區</a></li>
-				<li><a href='/Mugs/cat/id/32' class="generic-anchor footer-list-anchor">預約試乘</a></li>
-				<li><a href='/Pet-Lover/cat/id/108' class="generic-anchor footer-list-anchor">原廠保證</a></li>
-			  </ul>
-			  <ul class="footer-list-top">
-				<li id='help'>
-				  <h4 class="footer-list-header">車主專區</h4></li>
-				<li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">愛車資訊</a></li>
-				<li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">愛車服務</a></li>
-				<li id='find-a-store'><a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">服務據點</a></li>
-				<li id='user-registration'><a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">預約保修</a></li>
-			  </ul>
-			  <ul class="footer-list-top">
-				<li id='help'>
-				  <h4 class="footer-list-header">購車專區</h4></li>
-				<li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">預約試乘</a></li>
-				<li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">展示據點</a></li>
-				<li id='find-a-store'><a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">推薦業代</a></li>
-				<li id='user-registration'><a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">購車試算</a></li>
-			  
-			  </ul>
-			  <section class="footer-social-section flex-rw">
-				  <span class="footer-social-overlap footer-social-connect">
-				  CONNECT <span class="footer-social-small">with</span> US
-				  </span>
-				  <span class="footer-social-overlap footer-social-icons-wrapper">
-				  <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
-				  <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
-				  <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
-				  <a href="https://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
-				  <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
-				  <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
-				  </span>
-			  </section>
-			  <section class="footer-bottom-section flex-rw">
-			<div class="footer-bottom-wrapper">   
-			<i class="fa fa-copyright" role="copyright">
-			 
-			</i> 2018 Honda in <address class="footer-address" role="company address">Taiwan, TW</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
+						<a href='/honda-about/about1.html' class="generic-anchor footer-list-anchor">企業願景</a>
+				</li>
+				<li>
+						<a href='/honda-about/about1.html' class="generic-anchor footer-list-anchor">生產中心</a>
+				</li>
+				<li>
+						<a href='/honda-about/about1.html' class="generic-anchor footer-list-anchor">夢想動力</a>
+				</li>
+
+		</ul>
+		<ul class="footer-list-top d-none d-md-block">
+				<li>
+						<h4 class="footer-list-header">車系介紹</h4>
+				</li>
+				<li>
+						<a href='/cars/cars.html' class="generic-anchor footer-list-anchor">FIT</a>
+				</li>
+				<li>
+						<a href='/cars/cars.html#laba2' class="generic-anchor footer-list-anchor">HR-V</a>
+				</li>
+				<li>
+						<a href='/cars/cars.html#laba3' class="generic-anchor footer-list-anchor">CR-V</a>
+				</li>
+		</ul>
+		<ul class="footer-list-top d-none d-md-block">
+				<li>
+						<h4 class="footer-list-header">生活專區</h4>
+				</li>
+				<li>
+						<a href='/honda-life/honda-life.html' class="generic-anchor footer-list-anchor" >最新活動</a>
+				</li>
+				<li id='find-a-store'>
+						<a href='/honda-life/honda-life.html#honor' class="generic-anchor footer-list-anchor" >獲獎榮耀</a>
+				</li>
+				<li id='user-registration'>
+						<a href='/honda-life/honda-life.html#magazine' class="generic-anchor footer-list-anchor" >車主雜誌
+						</a>
+				</li>
+		</ul>
+		<ul class="footer-list-top d-none d-md-block">
+				<li>
+						<h4 class="footer-list-header">購車專區</h4>
+				</li>
+				<li>
+						<a href='../index.html' class="generic-anchor footer-list-anchor" >預約試乘</a>
+				</li>
+				<li id='find-a-store'>
+						<a href='../index.html' class="generic-anchor footer-list-anchor" >展示據點</a>
+				</li>
+				<li id='user-registration'>
+						<a href='../index.html' class="generic-anchor footer-list-anchor" >推薦業代</a>
+				</li>
+		</ul>
+		
+
+		<section class="footer-social-section flex-rw">
+				<span class="footer-social-overlap footer-social-connect">
+						CONNECT
+						<span class="footer-social-small">with</span> US
+				</span>
+				<span class="footer-social-overlap footer-social-icons-wrapper">
+						<a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink">
+								<i class="fa fa-pinterest"></i>
+						</a>
+						<a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink">
+								<i class="fa fa-facebook"></i>
+						</a>
+						<a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink">
+								<i class="fa fa-twitter"></i>
+						</a>
+						<a href="https://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink">
+								<i class="fa fa-instagram"></i>
+						</a>
+						<a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube"
+								itemprop="significantLink">
+								<i class="fa fa-youtube"></i>
+						</a>
+						<a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink">
+								<i class="fa fa-google-plus"></i>
+						</a>
+				</span>
+		</section>
+		<section class="footer-bottom-section flex-rw">
+				<div class="footer-bottom-wrapper" style="font-size: 15px">
+						<i class="fa fa-copyright" role="copyright">
+
+						</i> 2018 Honda in
+						<address class="footer-address" role="company address">Taiwan, TW</address>
+						<span class="footer-bottom-rights" > - 僅供教學使用，如有侵權請來信告知 - </span>
 				</div>
 				<div class="footer-bottom-wrapper">
-				<a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
-				  </div>
-			  </section>
-			</footer>	
+						<a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> |
+						<a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+				</div>
+		</section>
+</footer>
 
 
 			<script>
