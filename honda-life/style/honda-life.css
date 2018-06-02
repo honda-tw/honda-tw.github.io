@@ -603,6 +603,7 @@ footer {
 
 #bar hr {
   border: solid 1px;
+  co
 }
 
 h1 {
@@ -680,6 +681,7 @@ h1 {
   width: 85%;
 }
 #honor h2{
+  color: #000;
   position: absolute;
   top: 63%;
   left: 15%;
@@ -695,11 +697,13 @@ h1 {
 }
 [data-aos="honor_hr"] {
   /*初始值*/
-  width: 0;
+  width: 0; 
+  height: 2px; 
 }
 [data-aos="honor_hr"].aos-animate {
   width: 188px;
-  border:solid 1.5px #f00;
+  background-color:#f00;
+  height: 2px;
 }
 
 /* magazine */
@@ -746,9 +750,6 @@ h1 {
 
 /* meeting */
 
-#meeting {
-  padding-left: 15.6vw;
-}
 #meeting .row{
   margin-bottom: 4vw;
 }
@@ -809,6 +810,13 @@ h1 {
   transition-delay:all 3s;
 }
 #meeting .mask3 {
+  position: absolute;
+  background: #010101;
+  z-index: 3;
+  top: 0;
+  transition-delay:all 3s;
+}
+#meeting .mask4 {
   position: absolute;
   background: #010101;
   z-index: 3;
