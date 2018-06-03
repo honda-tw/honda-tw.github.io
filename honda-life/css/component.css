@@ -17,7 +17,7 @@
 
 .grid figure {
 	margin: 0;
-	position: relative;
+	position: relative;	
 }
 
 .grid figure img {
@@ -42,7 +42,7 @@
 }
 
 .grid figcaption span:before {
-	content: 'by ';
+	content: '';
 }
 
 .grid figcaption a {

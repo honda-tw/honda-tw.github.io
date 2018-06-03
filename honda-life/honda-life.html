@@ -251,7 +251,7 @@
 
 
     <!-- <div id="meeting" class="container-fluid meeting"> -->
-    <div id="meeting" class="container demo-3">
+    <div id="meeting" class="container-fluid demo-3">
         <!-- Top Navigation -->
 
         <ul class="grid cs-style-3">
@@ -262,9 +262,9 @@
                     </div>
                     <div class="mask1"></div>
                     <figcaption>
-                        <h3>Safari</h3>
-                        <span>Jacob Cummings</span>
-                        <a href="http://dribbble.com/shots/1116775-Safari">Take a look</a>
+                        <h3>Honda</h3>
+                        <span>Be your wing</span>
+                        <a href="#">Take a look</a>
                     </figcaption>
 
                 </figure>
@@ -276,9 +276,9 @@
                     </div>
                     <div class="mask2"></div>
                     <figcaption>
-                        <h3>Game Center</h3>
-                        <span>Jacob Cummings</span>
-                        <a href="http://dribbble.com/shots/1118904-Game-Center">Take a look</a>
+                        <h3>Honda</h3>
+                        <span>2017 Car Meeting</span>
+                        <a href="#">Take a look</a>
                     </figcaption>
                 </figure>
             </li>
@@ -289,22 +289,20 @@
                     </div>
                     <div class="mask3"></div>
                     <figcaption>
-                        <h3>Music</h3>
-                        <span>Jacob Cummings</span>
-                        <a href="http://dribbble.com/shots/1115960-Music">Take a look</a>
+                        <h3>Honda</h3>
+                        <span>2017 Car Meeting</span>
+                        <a href="#">Take a look</a>
                     </figcaption>
                 </figure>
             </li>
             <li>
                 <figure>
-                    <div>
-                        <img class="img4" src="img/meeting (3).jpg" alt="img02">
-                    </div>
+                    <div><img class="img4" src="img/meeting (4).jpg" alt="img04"></div>
                     <div class="mask4"></div>
                     <figcaption>
-                        <h3>Music</h3>
-                        <span>Jacob Cummings</span>
-                        <a href="http://dribbble.com/shots/1115960-Music">Take a look</a>
+                        <h3>Honda</h3>
+                        <span>2018 Car Meeting</span>
+                        <a href="#">Take a look</a>
                     </figcaption>
                 </figure>
             </li>
@@ -581,11 +579,21 @@
             var img1 = $('.img1').offset().top - window_h + 100;
             var img2 = $('.img2').offset().top - window_h + 100;
             var img3 = $('.img3').offset().top - window_h + 100;
+            var img4 = $('.img4').offset().top - window_h + 100;
 
             if (window_height > img1) {
+                // $('.mask1').animate({height:"3px", width:"10px"});
+                // $('.mask1').animate({height:"100%"});
+                // $('.mask1').delay(100).animate({width:"100%"});
+                // $('.mask1').delay(200).animate({
+                //     left:'100%'
+                // });
                 $('.mask1').addClass('mask_ani');
                 $('#meeting .img1').addClass('img_opacity');
                 $('#meeting .img1').addClass('unopacity');
+                
+            }else{
+
             }
             if (window_height > img2) {
                 $('.mask2').addClass('mask_ani');
@@ -598,7 +606,7 @@
                 $('#meeting .img3').addClass('unopacity');
             }
             if (window_height > img4) {
-                $('.mask3').addClass('mask_ani');
+                $('.mask4').addClass('mask_ani');
                 $('#meeting .img4').addClass('img_opacity');
                 $('#meeting .img4').addClass('unopacity');
             }
