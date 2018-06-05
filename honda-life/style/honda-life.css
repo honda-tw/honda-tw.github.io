@@ -39,293 +39,274 @@ table {
   border-spacing: 0;
 }
 
-
 /* navbar */
+
 @media(max-width: 767px) {
-    .menuIcon {
-        cursor: pointer;
-        display: block;
-        position: absolute;
-        right: 15px;
-        top: 8px;
-        height: 30px;
-        width: 35px;
-        z-index: 12;
-
-    }
-
-    /* Icon Bars */
-    .icon-bars {
-        background: rgb(13, 26, 38);
-        position: absolute;
-        left: 1px;
-        top: 80%;
-        height: 2px;
-        width: 30px;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-    }
-
-    .icon-bars::before {
-        background: rgb(13, 26, 38);
-        content: '';
-        position: absolute;
-        left: 0;
-        top: -8px;
-        height: 2px;
-        width: 30px;
-        /*     -webkit-transition: top 0.2s ease 0.3s;
+  .menuIcon {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    height: 30px;
+    width: 35px;
+    z-index: 12;
+  }
+  /* Icon Bars */
+  .icon-bars {
+    background: rgb(13, 26, 38);
+    position: absolute;
+    left: 1px;
+    top: 80%;
+    height: 2px;
+    width: 30px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .icon-bars::before {
+    background: rgb(13, 26, 38);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -8px;
+    height: 2px;
+    width: 30px;
+    /*     -webkit-transition: top 0.2s ease 0.3s;
 transition: top 0.2s ease 0.3s; */
-        -webkit-transition: 0.3s width 0.4s;
-        transition: 0.3s width 0.4s;
-    }
-
-    .icon-bars::after {
-        margin-top: 0px;
-        background: rgb(13, 26, 38);
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -8px;
-        height: 2px;
-        width: 30px;
-        /*     -webkit-transition: top 0.2s ease 0.3s;
+    -webkit-transition: 0.3s width 0.4s;
+    transition: 0.3s width 0.4s;
+  }
+  .icon-bars::after {
+    margin-top: 0px;
+    background: rgb(13, 26, 38);
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 2px;
+    width: 30px;
+    /*     -webkit-transition: top 0.2s ease 0.3s;
 transition: top 0.2s ease 0.3s; */
-        -webkit-transition: 0.3s width 0.4s;
-        transition: 0.3s width 0.4s;
+    -webkit-transition: 0.3s width 0.4s;
+    transition: 0.3s width 0.4s;
+  }
+  /* Bars Shadows */
+  .icon-bars.overlay {
+    background: rgb(97, 114, 129);
+    background: #D64358;
+    width: 20px;
+    animation: middleBar 3s infinite 0.5s;
+    -webkit-animation: middleBar 3s infinite 0.5s;
+  }
+  @keyframes middleBar {
+    0% {
+      width: 0px
     }
-
-    /* Bars Shadows */
-    .icon-bars.overlay {
-        background: rgb(97, 114, 129);
-        background: #D64358;
-        width: 20px;
-        animation: middleBar 3s infinite 0.5s;
-        -webkit-animation: middleBar 3s infinite 0.5s;
+    50% {
+      width: 20px
     }
-    @keyframes middleBar {
-        0% {
-            width: 0px
-        }
-        50% {
-            width: 20px
-        }
-        100% {
-            width: 0px
-        }
+    100% {
+      width: 0px
     }
-    @-webkit-keyframes middleBar {
-        0% {
-            width: 0px
-        }
-        50% {
-            width: 20px
-        }
-        100% {
-            width: 0px
-        }
+  }
+  @-webkit-keyframes middleBar {
+    0% {
+      width: 0px
     }
-
-    .icon-bars.overlay::before {
-        background: rgb(97, 114, 129);
-        background: #D64358;
-        width: 10px;
-        animation: topBar 3s infinite 0.2s;
-        -webkit-animation: topBar 3s infinite 0s;
+    50% {
+      width: 20px
     }
-    @keyframes topBar {
-        0% {
-            width: 0px
-        }
-        50% {
-            width: 10px
-        }
-        100% {
-            width: 0px
-        }
+    100% {
+      width: 0px
     }
-    @-webkit-keyframes topBar {
-        0% {
-            width: 0px
-        }
-        50% {
-            width: 10px
-        }
-        100% {
-            width: 0px
-        }
+  }
+  .icon-bars.overlay::before {
+    background: rgb(97, 114, 129);
+    background: #D64358;
+    width: 10px;
+    animation: topBar 3s infinite 0.2s;
+    -webkit-animation: topBar 3s infinite 0s;
+  }
+  @keyframes topBar {
+    0% {
+      width: 0px
     }
-
-    .icon-bars.overlay::after {
-        background: rgb(97, 114, 129);
-        background: #D64358;
-        width: 15px;
-        animation: bottomBar 3s infinite 1s;
-        -webkit-animation: bottomBar 3s infinite 1s;
+    50% {
+      width: 10px
     }
-    @keyframes bottomBar {
-        0% {
-            width: 0px
-        }
-        50% {
-            width: 15px
-        }
-        100% {
-            width: 0px
-        }
+    100% {
+      width: 0px
     }
-    @-webkit-keyframes bottomBar {
-        0% {
-            width: 0px
-        }
-        50% {
-            width: 15px
-        }
-        100% {
-            width: 0px
-        }
+  }
+  @-webkit-keyframes topBar {
+    0% {
+      width: 0px
     }
-
-    .menuIcon.toggle .icon-bars {
-        top: 20px;
-        transform: translate3d(0, 5px, 0) rotate(135deg);
-        transition-delay: 0.1s;
-        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    50% {
+      width: 10px
     }
-
-    .menuIcon.toggle .icon-bars::before {
-        top: 20;
-        transition-delay: 0.1s;
-        opacity: 0;
+    100% {
+      width: 0px
     }
-
-    .menuIcon.toggle .icon-bars::after {
-        top: 10px;
-        transform: translate3d(0, -10px, 0) rotate(-270deg);
-        transition-delay: 0.1s;
-        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .icon-bars.overlay::after {
+    background: rgb(97, 114, 129);
+    background: #D64358;
+    width: 15px;
+    animation: bottomBar 3s infinite 1s;
+    -webkit-animation: bottomBar 3s infinite 1s;
+  }
+  @keyframes bottomBar {
+    0% {
+      width: 0px
     }
-
-    .menuIcon.toggle .icon-bars.overlay {
-        width: 20px;
-        opacity: 0;
-        -webkit-transition: all 0s ease 0s;
-        transition: all 0s ease 0s;
-
+    50% {
+      width: 15px
     }
+    100% {
+      width: 0px
+    }
+  }
+  @-webkit-keyframes bottomBar {
+    0% {
+      width: 0px
+    }
+    50% {
+      width: 15px
+    }
+    100% {
+      width: 0px
+    }
+  }
+  .menuIcon.toggle .icon-bars {
+    top: 20px;
+    transform: translate3d(0, 5px, 0) rotate(135deg);
+    transition-delay: 0.1s;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .menuIcon.toggle .icon-bars::before {
+    top: 20;
+    transition-delay: 0.1s;
+    opacity: 0;
+  }
+  .menuIcon.toggle .icon-bars::after {
+    top: 10px;
+    transform: translate3d(0, -10px, 0) rotate(-270deg);
+    transition-delay: 0.1s;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .menuIcon.toggle .icon-bars.overlay {
+    width: 20px;
+    opacity: 0;
+    -webkit-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+  }
 }
 
 .overlay-menu {
-    background: #3a3a3a;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 69px;
-    right: 0;
-    padding-right: 15px;
-    transform: translateX(-100%);
-    width: 100vw;
-
-    height: calc(100vh - 69px);
-    -webkit-transition: transform 0.2s ease-out;
-    transition: transform 0.2s ease-out;
-    z-index: 999;
-    font-size: 15px;
-    text-align: center;
+  background: #3a3a3a;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 69px;
+  right: 0;
+  padding-right: 15px;
+  transform: translateX(-100%);
+  width: 100vw;
+  height: calc(100vh - 69px);
+  -webkit-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  z-index: 999;
+  font-size: 15px;
+  text-align: center;
 }
 
-
 .navbar-brand {
-    padding-top: 0;
-    padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navbar .card {
-    border: none;
-    background: none;
+  border: none;
+  background: none;
 }
 
 button {
-    padding: 0;
+  padding: 0;
 }
 
 .navbar .card-header {
-    font-size: 27px;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 20px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
+  font-size: 27px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .navbar .card-header h5 {
-    display: flex;
-    justify-content: flex-end;
-
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navbar .card-body {
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    color: #f8f9fa;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  color: #f8f9fa;
 }
 
 .navbar .btn {
-    font-size: 27px;
-    border: none;
-    padding: 0;
+  font-size: 27px;
+  border: none;
+  padding: 0;
 }
 
 .navbar .btn-link {
-    color: #fff;
+  color: #fff;
 }
-
 
 #accordion .navbar_collapse a {
-    font-size: 15px;
-    margin-bottom: 5px;
+  font-size: 15px;
+  margin-bottom: 5px;
 }
 
-.overlay-menu ul,
-.overlay-menu li {
-    display: block;
-    position: relative;
-    color: #353333;
-
+.overlay-menu ul, .overlay-menu li {
+  display: block;
+  position: relative;
+  color: #353333;
 }
 
 .overlay-menu li a {
-    display: block;
-    color: #FFf;
-    font-size: 1.8em;
-    letter-spacing: 4px;
-    /*   opacity: 0; */
-    padding: 10px 0;
-    text-align: right;
-    text-transform: uppercase;
-    -webkit-transition: color 0.3s ease;
-    transition: color 0.3s ease;
-    /*   -webkit-transition: 0.2s opacity 0.2s ease-out;
+  display: block;
+  color: #FFf;
+  font-size: 1.8em;
+  letter-spacing: 4px;
+  /*   opacity: 0; */
+  padding: 10px 0;
+  text-align: right;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  /*   -webkit-transition: 0.2s opacity 0.2s ease-out;
 transition: 0.2s opacity 0.2s ease-out; */
 }
 
-.overlay-menu li a:hover,
-.overlay-menu li a:active {
-    color: gray(28, 121, 184);
-    -webkit-transition: color 0.3s ease;
-    transition: color 0.3s ease;
+.overlay-menu li a:hover, .overlay-menu li a:active {
+  color: gray(28, 121, 184);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 @media screen and ( max-width: 768px) {
-    .navbar-brand img {
-        width: 50%;
-        height: 53px;
-    }
+  .navbar-brand img {
+    width: 50%;
+    height: 53px;
+  }
 }
 
 /* footer */
@@ -386,29 +367,30 @@ footer {
   width: 100%;
 }
 
-.footer_collapse a{
-    display: flex;
-    justify-content: center;
+.footer_collapse a {
+  display: flex;
+  justify-content: center;
 }
 
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: 0;
   background-color: #373737;
-  border-bottom: 1px solid rgba(0,0,0,.125);
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
+
 .btn-link {
   font-weight: 400;
   color: #fff;
   background-color: transparent;
 }
+
 .btn-link:hover {
   color: #fff;
   text-decoration: underline;
   background-color: transparent;
   border-color: transparent;
 }
-
 
 .footer-list-top {
   width: 25%;
@@ -592,7 +574,7 @@ footer {
 .banner {
   width: 100%;
   margin-bottom: 7vh;
-  box-shadow: 0 5px 20px #aaa;  
+  box-shadow: 0 5px 20px #aaa;
 }
 
 /* bar */
@@ -625,16 +607,16 @@ h1 {
 
 #news .news_pic {
   width: 100%;
-  border: 3px solid #fff;  
+  border: 3px solid #fff;
 }
 
 [data-aos="news_gray"] {
-  /*初始值*/  
-  filter:brightness(.3)
+  /*初始值*/
+  filter: brightness(.3)
 }
 
-[data-aos="news_gray"].aos-animate { 
-  filter:brightness(1);
+[data-aos="news_gray"].aos-animate {
+  filter: brightness(1);
 }
 
 #news_picframe:before, #news_picframe:after {
@@ -663,24 +645,29 @@ h1 {
 }
 
 /* honor */
+
 #honor.container {
   margin-right: 0;
 }
+
 #honor iframe {
   margin-bottom: calc(16px + 4vh);
   width: 85%;
   height: 35vw;
 }
+
 #honor .vidoe_img {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
+
 #honor img {
   width: 85%;
 }
-#honor h2{
+
+#honor h2 {
   color: #000;
   position: absolute;
   top: 63%;
@@ -690,20 +677,34 @@ h1 {
   font-size: 20px;
   font-family: 微軟正黑體;
 }
-#honor hr{
+
+#honor hr {
   position: absolute;
   top: 65%;
   left: 15%;
 }
+
 [data-aos="honor_hr"] {
   /*初始值*/
-  width: 0; 
-  height: 2px; 
+  width: 0;
+  height: 2px;
 }
+
 [data-aos="honor_hr"].aos-animate {
   width: 188px;
-  background-color:#f00;
+  background-color: #f00;
   height: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  #honor h2 {
+    top: 83%;
+    left: 21%;
+  }
+  #honor hr {
+    top: 85%;
+    left: 21%;
+  }
 }
 
 /* magazine */
@@ -750,34 +751,33 @@ h1 {
 
 /* meeting */
 
-#meeting .row{
+#meeting .row {
   margin-bottom: 4vw;
 }
 
 #meeting img {
   width: 100%;
   opacity: 0;
-  transition-delay:all 1s;
- 
+  transition-delay: all 1s;
 }
-#meeting img.unopacity{
-  opacity: 1;  
-  
-} 
-.img_opacity{
+
+#meeting img.unopacity {
+  opacity: 1;
+}
+
+.img_opacity {
   animation-name: img_opacity;
-  animation-duration: 1.5s;  
+  animation-duration: 1.5s;
 }
+
 @keyframes img_opacity {
   0% {
     opacity: 0;
   }
- 
   50% {
     opacity: 0;
     transform: translateX(-10%);
   }
-  
   100% {
     opacity: 1;
     transform: translateX(0%);
@@ -803,26 +803,29 @@ h1 {
   z-index: 3;
   top: 0;
 }
+
 #meeting .mask2 {
   position: absolute;
   background: #010101;
   z-index: 3;
   top: 0;
-  transition-delay:all 3s;
+  transition-delay: all 3s;
 }
+
 #meeting .mask3 {
   position: absolute;
   background: #010101;
   z-index: 3;
   top: 0;
-  transition-delay:all 3s;
+  transition-delay: all 3s;
 }
+
 #meeting .mask4 {
   position: absolute;
   background: #010101;
   z-index: 3;
   top: 0;
-  transition-delay:all 3s;
+  transition-delay: all 3s;
 }
 
 .mask_ani {
@@ -838,7 +841,6 @@ h1 {
   25% {
     width: 15px;
     height: 100%;
-    
   }
   50% {
     width: 100%;
@@ -856,18 +858,18 @@ h1 {
   }
 }
 
-/* [data-aos="mask_ani"] {
-  /*初始值*/
 
-/*
-  width: 3px;
-  height: 3px;
+
+
+/* bar # margin-bottom */
+@media only screen and (max-width: 570px) {
+  #bar{
+    margin-bottom: 2vh;
+  }
+  .footer-social-overlap>a:not(:first-child) {
+    margin-left: 0;
+  }
+  .footer-bottom-rights {
+    display: block;
+  }
 }
-
-[data-aos="mask_ani"].aos-animate {
-  height: 450px;
-  width: 100%;
-} */
-
-
-
