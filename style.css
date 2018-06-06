@@ -558,12 +558,14 @@
         }
 
         .news_text1 {
+            font-family: "微軟正黑體";
             width: 100%;
             height: 30%;
             padding-top: 20px;
         }
 
         .news_text2 {
+            font-family: "微軟正黑體";
             width: 100%;
             height: 30%;
             padding-top: 25px;
@@ -692,11 +694,13 @@
         }
 
         .media_pic2 {
-            background-image: url('image/media2.png')
+            background-image: url('image/media2.jpg');
+            background-position:center;
         }
 
         .media_pic3 {
-            background-image: url('image/media3.png')
+            background-image: url('image/media3.jpg');
+            background-position:center;
         }
 
         .media_smalltitle {
@@ -850,9 +854,9 @@
 
         .button {
             min-width: 13%;
-            padding: 1.1% 0%;
+            padding: 1.5% 0%;
             position: absolute;
-            top: 27.5%;
+            top: 22%;
             right: 7%;
             background-color: #353333;
             color: white;

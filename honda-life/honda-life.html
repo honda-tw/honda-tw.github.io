@@ -16,7 +16,13 @@
     <link rel="stylesheet" href="framework/aos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
+    <!-- hover effects -->
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+
     <link rel="stylesheet" href="style/honda-life.css">
+
 
     <script>
         window.addEventListener("load", function () {
@@ -237,49 +243,69 @@
 
 
 
-    <div id="meeting" class="container-fluid meeting">
-        <div class="row no-gutters">
-            <div class="col">
-                <img class="img1" src="img/meeting (1).jpg" alt="">
-                <div class="mask1"></div>
-            </div>
-            <div class="col">
-                <h1>Honda
-                    <span id="meeting_span">Be your wing</span>
-                </h1>
-                <p>從米蘭車展、東京車展到2017年底的台北車展，Honda Taiwan展出了多款亮眼機種，擄獲無數車迷的目光，當Honda Taiwan即將引進新款CB1000R、CRF 1000L Africa Twin以及GOLDWING的消息一出，便讓許多車主心神嚮往，殷切盼望著Honda新機種交車時刻。</p>
-            </div>
-        </div>
+    <!-- <div id="meeting" class="container-fluid meeting"> -->
+    <div id="meeting" class="container-fluid demo-3">
+        <!-- Top Navigation -->
 
-        <div class="row no-gutters">
-            <div class="col">
-                <img class="img2" src="img/meeting (2).jpg" alt="">
-                <div class="mask2"></div>
-            </div>
-            <div class="col">
-                <h1>Honda
-                    <span id="meeting_span">夢想總動員</span>
-                </h1>
-                <p>本次活動以「夢想總動員」為主題，邀請全台四輪、二輪共2,000位車主共襄盛舉參與此次盛會，並一起營造歡樂熱鬧的活動氣勢</p>
-            </div>
-        </div>
+        <ul class="grid cs-style-3">
+            <li>
+                <figure>
+                    <div>
+                        <img class="img1" src="img/meeting (1).jpg" alt="img05">
+                    </div>
+                    <div class="mask1"></div>
+                    <figcaption>
+                        <h3>Honda</h3>
+                        <span>Be your wing</span>
+                        <a href="#">Take a look</a>
+                    </figcaption>
 
-        <div class="row no-gutters">
-            <div class="col">
-                <img class="img3" src="img/meeting (3).jpg" alt="">
-                <div class="mask3"></div>
-            </div>
-
-
-            <div class="col">
-                <h1></h1>
-                <p></p>
-            </div>
-        </div>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div>
+                        <img class="img2" src="img/meeting (2).jpg" alt="img06">
+                    </div>
+                    <div class="mask2"></div>
+                    <figcaption>
+                        <h3>Honda</h3>
+                        <span>2017 Car Meeting</span>
+                        <a href="#">Take a look</a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div>
+                        <img class="img3" src="img/meeting (3).jpg" alt="img02">
+                    </div>
+                    <div class="mask3"></div>
+                    <figcaption>
+                        <h3>Honda</h3>
+                        <span>2017 Car Meeting</span>
+                        <a href="#">Take a look</a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <div><img class="img4" src="img/meeting (4).jpg" alt="img04"></div>
+                    <div class="mask4"></div>
+                    <figcaption>
+                        <h3>Honda</h3>
+                        <span>2018 Car Meeting</span>
+                        <a href="#">Take a look</a>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
     </div>
-    <!-- data-aos="fade-up" data-aos-easing="ease" data-aos-delay="700" -->
+  
+    <script src="js/toucheffects.js"></script>
+  
 
-
+   
 
 
 
@@ -504,25 +530,37 @@
             var img1 = $('.img1').offset().top - window_h + 100;
             var img2 = $('.img2').offset().top - window_h + 100;
             var img3 = $('.img3').offset().top - window_h + 100;
-
-
+            var img4 = $('.img4').offset().top - window_h + 100;
 
             if (window_height > img1) {
+                // $('.mask1').animate({height:"3px", width:"10px"});
+                // $('.mask1').animate({height:"100%"});
+                // $('.mask1').delay(100).animate({width:"100%"});
+                // $('.mask1').delay(200).animate({
+                //     left:'100%'
+                // });
                 $('.mask1').addClass('mask_ani');
-                $('#meeting .row .col .img1').addClass('img_opacity');
-                $('#meeting .row .col .img1').addClass('unopacity');
+                $('#meeting .img1').addClass('img_opacity');
+                $('#meeting .img1').addClass('unopacity');
+                
+            }else{
+
             }
             if (window_height > img2) {
                 $('.mask2').addClass('mask_ani');
-                $('#meeting .row .col .img2').addClass('img_opacity');
-                $('#meeting .row .col .img2').addClass('unopacity');
+                $('#meeting .img2').addClass('img_opacity');
+                $('#meeting .img2').addClass('unopacity');
             }
             if (window_height > img3) {
                 $('.mask3').addClass('mask_ani');
-                $('#meeting .row .col .img3').addClass('img_opacity');
-                $('#meeting .row .col .img3').addClass('unopacity');
+                $('#meeting .img3').addClass('img_opacity');
+                $('#meeting .img3').addClass('unopacity');
             }
-
+            if (window_height > img4) {
+                $('.mask4').addClass('mask_ani');
+                $('#meeting .img4').addClass('img_opacity');
+                $('#meeting .img4').addClass('unopacity');
+            }
             console.log('scrollTop' + window_height);
         })
 
