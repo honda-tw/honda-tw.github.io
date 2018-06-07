@@ -185,7 +185,7 @@
   }
   
   .footer-bottom-wrapper {
-    font-size: 1.5em;
+    font-size:15px;
     color: #fff;
   }
   
@@ -658,7 +658,6 @@
         .media_block {
             width: 100%;
             height: 90%;
-            background-color: ;
             display: flex;
             justify-content: space-between;
         }
@@ -666,7 +665,6 @@
         .media_box {
             width: 32%;
             height: 100%;
-            background-color: ;
         }
 
         .media_pic {
@@ -849,7 +847,7 @@
 
         .button {
             min-width: 13%;
-            padding: 1.5% 0%;
+            padding: 1.8% 0%;
             position: absolute;
             top: 22%;
             right: 7%;
@@ -864,8 +862,5 @@
             display: none;
         }
 
-        #headvideo {
-            display: ;
-        }
-
+  
         

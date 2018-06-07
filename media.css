@@ -135,8 +135,16 @@
     .container {
         max-width: 80%;
     }
+    .dropdown-menu{
+        min-width: 12rem;
+        padding: .8rem 0;
+        margin: .225rem 0 0;
+        font-size: 1rem;
+        text-align: center;
+    }
     .navbar-brand img {
-        height: 160px;
+        width:130%;
+        height: 120px;
     }
     .navbar-nav li > a {
         font-size: 190%;
@@ -148,7 +156,7 @@
         padding: 10px;
         font-size: 50px;
         letter-spacing: 8px;
-        font-family: "Segoe Script";
+        font-family: "微軟正黑體";
         font-weight: bolder;
         line-height: 60px;
     }
@@ -233,7 +241,7 @@
     }
     .button {
         min-width: 13%;
-        padding: 1.5% 0%;
+        padding: 1.9% 0%;
         background-color: #353333;
         color: white;
         border: 0;
@@ -248,16 +256,16 @@
         letter-spacing: 5px;
     }
     .footer-list-header {
-        font-size: 18px;
+        font-size: 30px;
     }
     .footer-list-anchor {
-        font-size: 4.5em;
+        font-size: 28px;
     }
     .footer-social-connect {
-        font-size: 4.5em;
+        font-size: 60px;
     }
     .footer-social-overlap>a {
-        font-size: 4.5em;
+        font-size: 4em;
     }
     .footer-bottom-wrapper {
         font-size: 2em;
@@ -517,6 +525,9 @@
         left: 3%;
         letter-spacing: 1px;
     }
+    .footer-social-overlap>a {
+        font-size: 2em;
+      }
 }
 
 @media screen and ( max-width:576px) {
